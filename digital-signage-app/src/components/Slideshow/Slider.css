@@ -1,0 +1,19 @@
+.containerTest {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.qrCode img {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  z-index: 2;
+  width: 10%;
+}
+
+.screensImg {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
