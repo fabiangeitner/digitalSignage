@@ -1,0 +1,44 @@
+.containerTest {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.header{
+  position: relative;
+  background-color: #23645D;
+}
+
+h1 {
+  font-family: "Proforma";
+  font-weight: bold;
+  color: #FFFF;
+}
+
+h2{
+  font-family: "Proforma";
+  font-weight: bold;
+  color: #23645D;
+}
+
+h3{
+  font-weight: bold;
+}
+
+.content{
+  font-family: "Sofia Pro";
+  font-weight: bold;
+  color: black;
+}
+
+.welcome {
+  object-fit: scale-down;
+}
+
+.footer{
+  background-color: #23645D;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
