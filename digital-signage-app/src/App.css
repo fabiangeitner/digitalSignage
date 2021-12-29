@@ -1,0 +1,19 @@
+@import url("https://use.typekit.net/zav3guf.css");
+
+h1 {
+  font-family: proforma, serif;
+  font-weight: 700;
+  font-style: bold;
+}
+
+p {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  /* 700 bold || 400 normal */
+  font-style: normal;
+}
+
+/* green #23645D */
+/* gray #707070 */
+/* orange #FF772F */
+/* white #EDEDED */
