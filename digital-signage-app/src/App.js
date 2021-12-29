@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Routes>
         {/* <Route path="/" element={<Slider slides={SliderData} />} /> */}
+        <Route path="welcome" element={<WelcomePage />} />
         <Route path="test" element={<TestComponent />} />
         <Route path="/" element={<Slideshow />} />
         <Route path="overview" element={<OverviewPage />} />
