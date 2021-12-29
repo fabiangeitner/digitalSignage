@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SliderCss from "./Slider.css";
-import styled from "styled-components";
+import "./Slider.css";
 
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,7 +19,7 @@ export const Slideshow = () => {
                 src={slide.image}
                 alt={slide.imageInfo}
               />
-              <Link to="/test" className="qrCode">
+              <Link to="/welcome" className="qrCode">
                 <img
                   src="https://www.kaspersky.de/content/de-de/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png"
                   alt=""
