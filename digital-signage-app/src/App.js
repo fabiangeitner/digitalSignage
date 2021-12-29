@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { WelcomePage } from "./components/WelcomePage";
 import { Slideshow } from "./components/Slideshow/Slider";
 import { TestComponent } from "./components/TestComponent";
 import { OverviewPage } from "./components/OverviewPage";

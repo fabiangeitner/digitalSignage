@@ -11,6 +11,7 @@ const HeaderWrapper = styled.div`
 
 const HeaderHeadline = styled.h1`
   color: #fff;
+  font-size: 20px;
   text-transform: uppercase;
   margin: 0;
 `;
