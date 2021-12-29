@@ -16,6 +16,9 @@ const DropdownWrapper = styled.div`
 
 const IconWrapper = styled(BsHandbag)`
   font-size: 20px;
+  @media (min-width: 800px) {
+    font-size: 30px;
+  }
 `;
 
 export const DropdownHeader = () => {
