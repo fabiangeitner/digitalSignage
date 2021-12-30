@@ -7,7 +7,7 @@
   
   .header {
     background-color: #23645d;
-    height: 15vh;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,11 +52,48 @@
   
   .wrapperText {
     background-color: #EDEDED;
-    margin-top: 30vh;
-    padding-top: 10vh;
-    width: 80%;
-    height: 40vh;
+    margin-top: 33vh;
+    padding-top: 6vh;
+    border-radius: 10px;
+    width: 90%;
+    height: 48vh;
     text-align: center;
+  }
+
+  .wrapperText h3 {
+      margin-bottom: 1vh;
+  }
+
+  #subtitle {
+    color: #707070;
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 0.5vh;
+  }
+
+  #price {
+    color: #FF772F;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0.5vh;
+  }
+
+  #description {
+    color: #000000;
+    font-weight: 100;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 0.7vh;
+  }
+
+  #addOn {
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 5vw;
+    text-align: left;
   }
 
   h2 {
@@ -67,18 +104,18 @@
 
   p {
     font-family: "Sofia Pro";
-    font-weight: bold;
-    font-size: 15px;
   }
   
   .footer-filliale {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 5vh;
+    height: 5.5vh;
     text-align: center;
   }
 
   .footer-filliale p {
     color: #23645d;
+    font-weight: bold;
+    font-size: 15px;
   }

@@ -17,7 +17,7 @@ export const DetailPage = () => {
         <div className="content">
           <div className="imageStars">
             <img 
-                className="stars mt-3"
+                className="stars mt-2"
                 src={stars}
                 alt="Sterne Bewertung"
             />
@@ -29,7 +29,10 @@ export const DetailPage = () => {
           />
           <div className="wrapperText mx-auto">
             <h2 class="">If I stay</h2>
-            <p></p>
+            <p id="subtitle">368 Seiten, Taschenbuch, 2011</p>
+            <p id="price">15 EUR</p>
+            <p id="description">Innerhalb eines Wimpernschlags ändert sich alles. Die siebzehnjährige Mia hat keine Erinnerung an den Unfall; sie kann sich nur daran erinnern, was danach geschah, als sie sah, wie ihr eigener beschädigter Körper aus dem Wrack geholt wurde. Nach und nach kämpft sie darum...</p>
+            <p id="addOn">weiterlesen…</p>
           </div>
         </div>
         <div class="footer-filliale">
