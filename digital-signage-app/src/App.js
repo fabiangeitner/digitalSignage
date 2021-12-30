@@ -5,6 +5,7 @@ import { TestComponent } from "./components/TestComponent";
 import { WelcomePage } from "./components/WelcomePage/WelcomePage";
 import { OverviewPage } from "./components/OverviewPage/OverviewPage";
 import { DetailPage } from "./components/DetailPage/DetailPage";
+import { CustomerReview } from "./components/ReviewPage/CustomerReview";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Slideshow />} />
         <Route path="overview" element={<OverviewPage />} />
         <Route path="detail" element={<DetailPage />} />
+        <Route path="review" element={<CustomerReview />} />
       </Routes>
     </div>
   );

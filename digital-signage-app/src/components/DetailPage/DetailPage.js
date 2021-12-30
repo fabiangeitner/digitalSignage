@@ -42,6 +42,8 @@ const ImageStars = styled.div`
   }
 `;
 
+const LinkTo = styled(Link)``;
+
 const WrapperText = styled.div`
   background-color: #ededed;
   margin-top: 30vh;
@@ -147,7 +149,9 @@ export const DetailPage = () => {
         <Header />
         <Content>
           <ImageStars>
-            <img className="stars mt-2" src={stars} alt="Sterne Bewertung" />
+            <LinkTo to="/review">
+              <img className="stars mt-2" src={stars} alt="Sterne Bewertung" />
+            </LinkTo>
           </ImageStars>
           <img className="book my-2" src={book} alt="Buch groß" />
           <WrapperText>

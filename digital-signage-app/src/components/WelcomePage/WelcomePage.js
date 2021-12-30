@@ -1,10 +1,19 @@
 import React from "react";
+import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 import "./WelcomePage.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import welcome from "../../Assets/WelcomePage.png";
+
+const Headline = styled.h2`
+  font-family: "Proforma";
+  font-weight: bold;
+  color: #23645d;
+  font-size: 25px;
+  padding-top: 20px;
+`;
 
 export const WelcomePage = () => {
   return (
@@ -14,7 +23,7 @@ export const WelcomePage = () => {
           <span class="header-headline">STORYTIME</span>
         </div>
         <div className="content">
-          <h2 class="pt-4 pb-1">WILLKOMMEN</h2>
+          <Headline>WILLKOMMEN</Headline>
           <p>So funktioniert's:</p>
           <Link to="/overview">
             <img
