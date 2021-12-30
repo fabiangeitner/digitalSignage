@@ -18,3 +18,15 @@
   height: 100vh;
   object-fit: cover;
 }
+
+@media (min-width: 800px) {
+  .screensImg {
+    width: auto;
+  }
+
+  .qrCode img {
+    bottom: 10%;
+    right: 15%;
+    width: 10%;
+  }
+}

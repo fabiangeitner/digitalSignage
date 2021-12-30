@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Header } from "../Header/Header";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import book from "../../Assets/Book-IfIStay.png";
+import book from "../../Assets/Books/Bestsellerbuch2.jpeg";
 import stars from "../../Assets/stars.png";
 import heart from "../../Assets/heart.png";
 
@@ -21,7 +21,7 @@ const Content = styled.div`
   color: black;
   height: 75vh;
   .book {
-    height: 40%;
+    height: 35%;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +43,7 @@ const ImageStars = styled.div`
 `;
 
 const WrapperText = styled.div`
-  background-color: #EDEDED;
+  background-color: #ededed;
   margin-top: 30vh;
   padding-top: 3.5vh;
   border-radius: 10px;
@@ -88,7 +88,7 @@ const WrapperText = styled.div`
   }
 
   #price {
-    color: #FF772F;
+    color: #ff772f;
     font-weight: bold;
     font-size: 15px;
     @media (min-width: 800px) {
@@ -144,35 +144,29 @@ export const DetailPage = () => {
   return (
     <>
       <ContainerTest>
-        <Header/>
+        <Header />
         <Content>
           <ImageStars>
-            <img 
-                className="stars mt-2"
-                src={stars}
-                alt="Sterne Bewertung"
-            />
+            <img className="stars mt-2" src={stars} alt="Sterne Bewertung" />
           </ImageStars>
-          <img
-            className="book my-2"
-            src={book}
-            alt="Buch groß"
-          />
+          <img className="book my-2" src={book} alt="Buch groß" />
           <WrapperText>
-            <img
-              className="heart my-1"
-              src={heart}
-              alt="favoriten"
-            />
-            <h2 class="">If I stay</h2>
-            <p id="subtitle">368 Seiten, Taschenbuch, 2011</p>
+            <img className="heart my-1" src={heart} alt="favoriten" />
+            <h2 class="">Mein Kopf, ein Universum</h2>
+            <p id="subtitle">272 Seiten, Taschenbuch, 2021</p>
             <p id="price">15 EUR</p>
-            <p id="description">Innerhalb eines Wimpernschlags ändert sich alles. Die siebzehnjährige Mia hat keine Erinnerung an den Unfall; sie kann sich nur daran erinnern, was danach geschah, als sie sah, wie ihr eigener beschädigter Körper aus dem Wrack geholt wurde. Nach und nach kämpft sie darum...</p>
+            <p id="description">
+              Einzigartig turbulent und auf ungewöhnliche Weise wunderbar
+              normal. So würde ich mein Leben beschreiben, wenn ich einen Satz
+              zur Verfügung hätte. Doch ich habe ein ganzes Buch! Ich nehme dich
+              Kapitel für Kapitel mit in mein Universum und erzähle dir, wie ich
+              mir seit meiner Kindheit Wünsche...
+            </p>
             <p id="addOn">weiterlesen…</p>
           </WrapperText>
         </Content>
         <FooterFilliale>
-            <p>In dieser Filliale verfügbar</p>
+          <p>In dieser Filliale verfügbar</p>
         </FooterFilliale>
       </ContainerTest>
     </>

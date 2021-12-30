@@ -2,20 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { Header } from "./Header/Header";
-import { DropdownHeader } from "./Header/Dropdown";
+import { Header } from "../Header/Header";
+import { DropdownHeader } from "../Header/Dropdown";
 
-import Bestseller1 from "../Assets/Books/Bestsellerbuch1.jpeg";
-import Bestseller2 from "../Assets/Books/Bestsellerbuch2.jpeg";
-import Bestseller3 from "../Assets/Books/Bestsellerbuch3.jpeg";
-import Empfehlung1 from "../Assets/Books/1buch.jpeg";
-import Empfehlung2 from "../Assets/Books/2buch.jpeg";
-import Empfehlung3 from "../Assets/Books/3buch.jpeg";
-import Empfehlung4 from "../Assets/Books/4buch.jpeg";
-import Beliebt1 from "../Assets/Books/buch1.jpeg";
-import Beliebt2 from "../Assets/Books/buch2.jpeg";
-import Beliebt3 from "../Assets/Books/buch3.jpeg";
-import Beliebt4 from "../Assets/Books/buch4.jpeg";
+import Bestseller1 from "../../Assets/Books/Bestsellerbuch1.jpeg";
+import Bestseller2 from "../../Assets/Books/Bestsellerbuch2.jpeg";
+import Bestseller3 from "../../Assets/Books/Bestsellerbuch3.jpeg";
+import Empfehlung1 from "../../Assets/Books/1buch.jpeg";
+import Empfehlung2 from "../../Assets/Books/2buch.jpeg";
+import Empfehlung3 from "../../Assets/Books/3buch.jpeg";
+import Empfehlung4 from "../../Assets/Books/4buch.jpeg";
+import Beliebt1 from "../../Assets/Books/buch1.jpeg";
+import Beliebt2 from "../../Assets/Books/buch2.jpeg";
+import Beliebt3 from "../../Assets/Books/buch3.jpeg";
+import Beliebt4 from "../../Assets/Books/buch4.jpeg";
 
 const Headline = styled.h2`
   font-size: 12px;
@@ -208,7 +208,7 @@ export const OverviewPage = () => {
           <CarouselItemBestseller className="col-4">
             <img src={Bestseller1} alt="Bestseller1" />
           </CarouselItemBestseller>
-          <CarouselItemBestsellerMiddle to="/" className="col-4">
+          <CarouselItemBestsellerMiddle to="/detail" className="col-4">
             <img src={Bestseller2} alt="Bestseller2" />
           </CarouselItemBestsellerMiddle>
           <CarouselItemBestseller className="col-4">

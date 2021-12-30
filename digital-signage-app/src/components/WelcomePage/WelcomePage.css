@@ -1,7 +1,6 @@
 .containerTest {
   width: 100vw;
   height: 100vh;
-  position: relative;
   text-align: center;
 }
 
@@ -49,6 +48,12 @@ p {
 
 .welcomeImg {
   width: 100%;
+}
+
+@media (min-width: 800px) {
+  .welcomeImg {
+    width: 40%;
+  }
 }
 
 .footer {
