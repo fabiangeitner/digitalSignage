@@ -6,6 +6,7 @@ import "./DetailPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import book from "../../Assets/Book-IfIStay.png";
 import stars from "../../Assets/stars.png";
+import heart from "../../Assets/heart.png";
 
 export const DetailPage = () => {
   return (
@@ -28,6 +29,11 @@ export const DetailPage = () => {
             alt="Buch groß"
           />
           <div className="wrapperText mx-auto">
+            <img
+              className="heart my-1"
+              src={heart}
+              alt="favoriten"
+            />
             <h2 class="">If I stay</h2>
             <p id="subtitle">368 Seiten, Taschenbuch, 2011</p>
             <p id="price">15 EUR</p>

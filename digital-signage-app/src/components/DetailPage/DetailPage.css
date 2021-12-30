@@ -2,7 +2,6 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    text-align: center;
   }
   
   .header {
@@ -37,11 +36,11 @@
   }
 
   .stars {
-    width: 30%;
+    height: 3vh;
   }
 
   .book {
-    width: 50%;
+    height: 40%;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -52,16 +51,23 @@
   
   .wrapperText {
     background-color: #EDEDED;
-    margin-top: 33vh;
-    padding-top: 6vh;
+    margin-top: 30vh;
+    padding-top: 2vh;
     border-radius: 10px;
     width: 90%;
-    height: 48vh;
-    text-align: center;
   }
 
-  .wrapperText h3 {
+  .heart {
+    height: 4vh;
+    margin-left: 83%;
+    left: 0;
+    right: 0;
+    text-align: right;
+  }
+
+  .wrapperText h2 {
       margin-bottom: 1vh;
+      text-align: center;
   }
 
   #subtitle {
@@ -69,6 +75,7 @@
     font-weight: normal;
     font-size: 12px;
     margin-bottom: 0.5vh;
+    text-align: center;
   }
 
   #price {
@@ -76,6 +83,7 @@
     font-weight: bold;
     font-size: 15px;
     margin-bottom: 0.5vh;
+    text-align: center;
   }
 
   #description {
@@ -93,6 +101,7 @@
     font-weight: bold;
     font-size: 15px;
     padding-left: 5vw;
+    padding-bottom: 3vw;
     text-align: left;
   }
 
