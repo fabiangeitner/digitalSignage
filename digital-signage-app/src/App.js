@@ -4,6 +4,7 @@ import { Slideshow } from "./components/Slideshow/Slider";
 import { TestComponent } from "./components/TestComponent";
 import { WelcomePage } from "./components/WelcomePage/WelcomePage";
 import { OverviewPage } from "./components/OverviewPage";
+import { DetailPage } from "./components/DetailPage/DetailPage";
 
 function App() {
   return (

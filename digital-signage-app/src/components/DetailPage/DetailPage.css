@@ -1,0 +1,130 @@
+.containerTest {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .header {
+    background-color: #23645d;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-headline {
+    margin: 0;
+  }
+  
+  span {
+    font-family: "Proforma";
+    font-weight: bold;
+    color: #ffff;
+    font-size: 35px;
+  }
+
+  .content {
+    font-family: "Sofia Pro";
+    font-weight: bold;
+    color: black;
+    height: 75vh;
+  }
+
+  .imageStars{
+      text-align: right;
+      margin-right: 5vw;
+  }
+
+  .stars {
+    height: 3vh;
+  }
+
+  .book {
+    height: 40%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .wrapperText {
+    background-color: #EDEDED;
+    margin-top: 30vh;
+    padding-top: 2vh;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .heart {
+    height: 4vh;
+    margin-left: 83%;
+    left: 0;
+    right: 0;
+    text-align: right;
+  }
+
+  .wrapperText h2 {
+      margin-bottom: 1vh;
+      text-align: center;
+  }
+
+  #subtitle {
+    color: #707070;
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 0.5vh;
+    text-align: center;
+  }
+
+  #price {
+    color: #FF772F;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0.5vh;
+    text-align: center;
+  }
+
+  #description {
+    color: #000000;
+    font-weight: 100;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 0.7vh;
+  }
+
+  #addOn {
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 5vw;
+    padding-bottom: 3vw;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: "Sofia Pro";
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  p {
+    font-family: "Sofia Pro";
+  }
+  
+  .footer-filliale {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5.5vh;
+    text-align: center;
+  }
+
+  .footer-filliale p {
+    color: #23645d;
+    font-weight: bold;
+    font-size: 15px;
+  }
