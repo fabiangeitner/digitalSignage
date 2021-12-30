@@ -1,0 +1,84 @@
+.containerTest {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #23645d;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-headline {
+    margin: 0;
+  }
+  
+  span {
+    font-family: "Proforma";
+    font-weight: bold;
+    color: #ffff;
+    font-size: 35px;
+  }
+
+  .content {
+    font-family: "Sofia Pro";
+    font-weight: bold;
+    color: black;
+    height: 75vh;
+  }
+
+  .imageStars{
+      text-align: right;
+      margin-right: 5vw;
+  }
+
+  .stars {
+    width: 30%;
+  }
+
+  .book {
+    width: 50%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .wrapperText {
+    background-color: #EDEDED;
+    margin-top: 30vh;
+    padding-top: 10vh;
+    width: 80%;
+    height: 40vh;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Sofia Pro";
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  p {
+    font-family: "Sofia Pro";
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .footer-filliale {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+  }
+
+  .footer-filliale p {
+    color: #23645d;
+  }
