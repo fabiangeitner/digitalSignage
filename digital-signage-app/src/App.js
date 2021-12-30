@@ -15,6 +15,7 @@ function App() {
         <Route path="test" element={<TestComponent />} />
         <Route path="/" element={<Slideshow />} />
         <Route path="overview" element={<OverviewPage />} />
+        <Route path="detail" element={<DetailPage />} />
       </Routes>
     </div>
   );
