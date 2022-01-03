@@ -47,7 +47,6 @@ const CarouselItemBestseller = styled.div`
   align-items: center;
   img {
     width: 90%;
-    border: 2px solid #ff772f;
     @media (min-width: 800px) {
       width: 60%;
     }
@@ -60,7 +59,8 @@ const CarouselItemBestsellerMiddle = styled(Link)`
 
   img {
     width: 120%;
-    border: 2px solid #ff772f;
+    border: 4px solid #ff772f;
+    border-radius: 3px;
     @media (min-width: 800px) {
       width: 70%;
     }
