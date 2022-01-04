@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 
 import stars from "../../Assets/just-stars.png";
 import quantity from "../../Assets/quantity.png";
-import item1 from "../../Assets/Books/item1.png";
-import item2 from "../../Assets/Books/item2.png";
-import item3 from "../../Assets/Books/item3.png";
 import bestseller from "../../Assets/bestseller-tag.png";
 
 
@@ -128,7 +125,7 @@ export const Cart = () => {
         {Items.map((items) => (
           <Item className="row">
             <div className="col-3">
-                <img src={item1} alt="Buch Cover"/>
+                <img src={items.cover} alt="Buch Cover"/>
             </div>
             <div className="item-content col-6">
                 <h4>{items.headline}</h4>
