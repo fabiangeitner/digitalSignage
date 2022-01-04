@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import stars from "../../Assets/just-stars.png";
 import quantity from "../../Assets/quantity.png";
-import bestseller from "../../Assets/bestseller-tag.png";
 import mastercard from "../../Assets/PaymentMethod/mastercard.png";
 import klarna from "../../Assets/PaymentMethod/klarna.png";
 import paypal from "../../Assets/PaymentMethod/paypal.png";
@@ -150,7 +149,6 @@ export const Cart = () => {
                 <img src={quantity} alt="Quantity" />
             </div>
             <div className="item-content-right col-3">
-                <img src={bestseller} alt="Bestseller Tag" />
                 <h4>{items.price}</h4>
             </div>
           </Item>
