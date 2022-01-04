@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import stars from "../../Assets/just-stars.png";
 import quantity from "../../Assets/quantity.png";
 import bestseller from "../../Assets/bestseller-tag.png";
+import mastercard from "../../Assets/PaymentMethod/mastercard.png";
+import klarna from "../../Assets/PaymentMethod/klarna.png";
+import paypal from "../../Assets/PaymentMethod/paypal.png";
 
 
 import { Header } from "../Header/Header";
@@ -83,34 +86,47 @@ const Item = styled.div`
   }
 `;
 
-const Total = styled.div`
-  padding: 0 20px;
+const WrapperTotal = styled.div`
+  padding: 0 25px;
   @media (min-width: 800px) {
-    padding: 20px 400px;
+    padding: 20px 405px;
   }
-  hr {
-    background: #23645d;
-    margin-bottom: 10px;
-  }
+`
+
+const Total = styled.div`
   h2 {
     font-size: 20px;
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     color: #000;
-    text-align: center;
+    text-align: left;
   }
   h2:nth-child(2) {
     color: #FF772F;
+    text-align: right;
+  }
+  hr {
+    background: #23645d;
+    margin-bottom: 10px;
+    height: 2px;
   }
 `
 
 const Payment = styled.div`
-  padding: 0 20px;
-  @media (min-width: 800px) {
-    padding: 50px 400px;
-  }
+  padding: 0 50px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
   img {
-      width: 40%;
+    width: 15%;
+  }
+  @media (min-width: 800px) {
+    padding: 15px 600px;
+    img {
+      width: 15%;
+    }
   }
 `
 
@@ -140,13 +156,17 @@ export const Cart = () => {
           </Item>
         ))}
       </CartItems>
-      <Total className="row">
-        <h2 className="col-3">Total</h2>
-        <h2 className="col-3 offset-6">44,94</h2>
-        <hr />
-      </Total>
+      <WrapperTotal className="container">
+        <Total className="row">
+          <h2 className="col-3">Total</h2>
+          <h2 className="col-4 offset-5">44,94 €</h2>
+          <hr />
+        </Total>
+      </WrapperTotal>
       <Payment>
-          <img src={bestseller} alt="Payment types"/>
+          <img src={mastercard} alt="Payment types"/>
+          <img src={klarna} alt="Payment types"/>
+          <img src={paypal} alt="Payment types"/>
       </Payment>
 
     </>
