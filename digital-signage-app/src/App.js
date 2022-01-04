@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import "./App.css";
 import { Slideshow } from "./components/Slideshow/Slider";
 import { TestComponent } from "./components/TestComponent";
@@ -6,6 +6,7 @@ import { WelcomePage } from "./components/WelcomePage/WelcomePage";
 import { OverviewPage } from "./components/OverviewPage/OverviewPage";
 import { DetailPage } from "./components/DetailPage/DetailPage";
 import { CustomerReview } from "./components/ReviewPage/CustomerReview";
+import { Cart } from "./components/Cart/Cart";
 import { InfoCheckout } from "./components/Infopages/InfoCheckout";
 import { InfoFavorit } from "./components/Infopages/InfoFavorit";
 import { InfoProfile } from "./components/Infopages/InfoProfile";
@@ -21,6 +22,7 @@ function App() {
         <Route path="overview" element={<OverviewPage />} />
         <Route path="detail" element={<DetailPage />} />
         <Route path="review" element={<CustomerReview />} />
+        <Route path="cart" element={<Cart />} />
         <Route
           path="infoCheckout"
           element={
