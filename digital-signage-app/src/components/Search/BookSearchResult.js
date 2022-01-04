@@ -19,12 +19,12 @@ const Search = styled.div`
     margin-bottom: 0;
     @media (min-width: 800px) {
       font-size: 17px;
-      margin-bottom: 25px;
+      margin-bottom: 0;
     }
   }
   @media (min-width: 800px) {
-    padding: 50px 400px;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin: 20px 400px;
   }
 `
 

@@ -6,7 +6,10 @@ import { Header } from "../Header/Header";
 
 const Search = styled.div`
   padding: 20px;
-  margin-bottom: 10px;
+  @media (min-width: 800px) {
+    padding: 20px 400px;
+    margin-bottom: 0;
+  }
   input {
       width: 100%;
       border-radius: 20px;
@@ -17,13 +20,19 @@ const Search = styled.div`
       font-size: 15px;
       font-family: sofia-pro, sans-serif;
       font-weight: 400;
+      @media (min-width: 800px) {
+        font-size: 17px;
+        margin-bottom: 0;
+      }
   }
 `
 
 const FrequentlySearched = styled.div`
   padding: 0 20px;
   margin-bottom: 10px;
-  
+  @media (min-width: 800px) {
+    padding: 20px 400px;
+  }
 `
 
 const Headline = styled.h2`
