@@ -8,7 +8,6 @@ import mastercard from "../../Assets/PaymentMethod/mastercard.png";
 import klarna from "../../Assets/PaymentMethod/klarna.png";
 import paypal from "../../Assets/PaymentMethod/paypal.png";
 
-
 import { Header } from "../Header/Header";
 import { Items } from "./CartItems";
 
@@ -36,7 +35,7 @@ const Item = styled.div`
   padding: 10px;
   margin: 0 5px 20px 5px;
   border-radius: 5px;
-  img:first-child{
+  img:first-child {
     width: 100%;
     @media (min-width: 800px) {
       width: 80%;
@@ -44,33 +43,33 @@ const Item = styled.div`
   }
   .item-content {
     #stars {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
     img {
-        width: 40%;
-        display: block;
-    
-        @media (min-width: 800px) {
-          width: 20%;
-        }
+      width: 40%;
+      display: block;
+
+      @media (min-width: 800px) {
+        width: 20%;
       }
+    }
   }
   .item-content-right {
     position: relative;
     img {
+      width: 100%;
+      position: absolute;
+
+      @media (min-width: 800px) {
         width: 100%;
-        position: absolute;
-    
-        @media (min-width: 800px) {
-          width: 100%;
-        }
       }
-      h4 {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin-bottom: 0;
-      }
+    }
+    h4 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-bottom: 0;
+    }
   }
   h4 {
     font-size: 15px;
@@ -90,7 +89,7 @@ const WrapperTotal = styled.div`
   @media (min-width: 800px) {
     padding: 20px 405px;
   }
-`
+`;
 
 const Total = styled.div`
   h2 {
@@ -101,7 +100,7 @@ const Total = styled.div`
     text-align: left;
   }
   h2:nth-child(2) {
-    color: #FF772F;
+    color: #ff772f;
     text-align: right;
   }
   hr {
@@ -109,7 +108,7 @@ const Total = styled.div`
     margin-bottom: 10px;
     height: 2px;
   }
-`
+`;
 
 const Payment = styled.div`
   padding: 0 50px;
@@ -119,15 +118,15 @@ const Payment = styled.div`
   margin-left: auto;
   margin-right: auto;
   img {
-    width: 15%;
+    width: 25%;
   }
   @media (min-width: 800px) {
-    padding: 15px 600px;
+    padding: 15px 700px;
     img {
-      width: 15%;
+      width: 20%;
     }
   }
-`
+`;
 
 export const Cart = () => {
   return (
@@ -140,16 +139,16 @@ export const Cart = () => {
         {Items.map((items) => (
           <Item className="row">
             <div className="col-3">
-                <img src={items.cover} alt="Buch Cover"/>
+              <img src={items.cover} alt="Buch Cover" />
             </div>
             <div className="item-content col-6">
-                <h4>{items.headline}</h4>
-                <h5>von {items.author}</h5>
-                <img id="stars" src={stars} alt="Sterne Bewertung" />
-                <img src={quantity} alt="Quantity" />
+              <h4>{items.headline}</h4>
+              <h5>von {items.author}</h5>
+              <img id="stars" src={stars} alt="Sterne Bewertung" />
+              <img src={quantity} alt="Quantity" />
             </div>
             <div className="item-content-right col-3">
-                <h4>{items.price}</h4>
+              <h4>{items.price}</h4>
             </div>
           </Item>
         ))}
@@ -162,11 +161,10 @@ export const Cart = () => {
         </Total>
       </WrapperTotal>
       <Payment>
-          <img src={mastercard} alt="Payment types"/>
-          <img src={klarna} alt="Payment types"/>
-          <img src={paypal} alt="Payment types"/>
+        <img src={mastercard} alt="Payment types" />
+        <img src={klarna} alt="Payment types" />
+        <img src={paypal} alt="Payment types" />
       </Payment>
-
     </>
   );
 };
