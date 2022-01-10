@@ -153,7 +153,9 @@ export const DetailPage = () => {
               <img className="stars mt-2" src={stars} alt="Sterne Bewertung" />
             </LinkTo>
           </ImageStars>
-          <img className="book my-2" src={book} alt="Buch groß" />
+          <LinkTo to="/cart">
+            <img className="book my-2" src={book} alt="Buch groß" />
+          </LinkTo>
           <WrapperText>
             <img className="heart my-1" src={heart} alt="favoriten" />
             <h2 class="">Mein Kopf, ein Universum</h2>

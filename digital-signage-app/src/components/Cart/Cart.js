@@ -96,8 +96,8 @@ const Total = styled.div`
     font-size: 20px;
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
-    color: #000;
-    text-align: left;
+    color: #ff772f;
+    text-align: center;
   }
   h2:nth-child(2) {
     color: #ff772f;
@@ -114,18 +114,21 @@ const Payment = styled.div`
   padding: 0 50px;
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  align-items: center;
   img {
     width: 25%;
   }
   @media (min-width: 800px) {
-    padding: 15px 700px;
     img {
-      width: 20%;
+      width: 6%;
     }
   }
+`;
+
+const LinkTo = styled(Link)`
+  text-decoration: none;
+  padding: 0;
 `;
 
 export const Cart = () => {
@@ -156,7 +159,9 @@ export const Cart = () => {
       <WrapperTotal className="container">
         <Total className="row">
           <h2 className="col-3">Total</h2>
-          <h2 className="col-4 offset-5">44,94 €</h2>
+          <LinkTo className="col-4 offset-5" to="/infoCheckout">
+            <h2>44,94 €</h2>
+          </LinkTo>
           <hr />
         </Total>
       </WrapperTotal>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Header } from "../Header/Header";
 import Smartphone from "../../Assets/Smartphone.png";
+import { Link } from "react-router-dom";
 
 const InfoFavoritWrapper = styled.div`
   height: 92vh;
@@ -20,13 +21,17 @@ const InfoFavoritWrapper = styled.div`
   }
 `;
 
+const LinkTo = styled(Link)``;
+
 export const InfoFavorit = (props) => {
   return (
     <div>
       <Header />
       <InfoFavoritWrapper className="container">
         <h3 className="py-5">{props.text}</h3>
-        <img src={Smartphone} alt="Smartphone-Screen" />
+        <LinkTo to="/infoProfile">
+          <img src={Smartphone} alt="Smartphone-Screen" />
+        </LinkTo>
       </InfoFavoritWrapper>
     </div>
   );
