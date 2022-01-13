@@ -47,7 +47,7 @@ form {
     font-weight: 300;
     color: #707070;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   div {
     width: 100%;
