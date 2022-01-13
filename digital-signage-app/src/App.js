@@ -12,6 +12,7 @@ import { InfoFavorit } from "./components/Infopages/InfoFavorit";
 import { InfoProfile } from "./components/Infopages/InfoProfile";
 import { BookSearch } from "./components/Search/BookSearch";
 import { BookSearchResult } from "./components/Search/BookSearchResult";
+import { LoginPage } from "./components/LoginPage/LoginPage"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="cart" element={<Cart />} />
         <Route path="search" element={<BookSearch />} />
         <Route path="search_result" element={<BookSearchResult />} />
+        <Route path="login" element={<LoginPage />} />
         <Route
           path="infoCheckout"
           element={
