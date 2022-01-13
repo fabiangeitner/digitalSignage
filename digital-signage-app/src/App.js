@@ -10,6 +10,8 @@ import { Cart } from "./components/Cart/Cart";
 import { InfoCheckout } from "./components/Infopages/InfoCheckout";
 import { InfoFavorit } from "./components/Infopages/InfoFavorit";
 import { InfoProfile } from "./components/Infopages/InfoProfile";
+import { BookSearch } from "./components/Search/BookSearch";
+import { BookSearchResult } from "./components/Search/BookSearchResult";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="detail" element={<DetailPage />} />
         <Route path="review" element={<CustomerReview />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="search" element={<BookSearch />} />
+        <Route path="search_result" element={<BookSearchResult />} />
         <Route
           path="infoCheckout"
           element={
