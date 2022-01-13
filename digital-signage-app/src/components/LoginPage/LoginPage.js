@@ -13,6 +13,11 @@ const Headline = styled.div`
 
 const Login = styled.div`
 
+form {
+    width: 80%;
+    margin: 0 auto; 
+  }
+
   h2 {
     font-size: 19px;
     font-family: sofia-pro, sans-serif;
@@ -28,7 +33,7 @@ const Login = styled.div`
     margin-bottom: 30px;
   }
   input{
-    width: 80%;
+    width: 100%;
     padding: 10px 20px;
     margin: 8px 0;
     border-radius: 4px;
@@ -45,7 +50,7 @@ const Login = styled.div`
     margin-bottom: 60px;
   }
   div {
-    width: 80%;
+    width: 100%;
     background-color: #FF772F;
     font-family: sofia-pro, sans-serif;
     text-align: center;
@@ -91,14 +96,14 @@ export const LoginPage = () => {
     return (
         <div>
             <Headline>
-                <h1 className="my-3">Sign in</h1>
+                <h1 className="my-4">Sign in</h1>
             </Headline>
             <Login> 
                 <h2 className="px-5 py-2">Sind Sie bereits Kunde?</h2>
-                    <form > 
+                    <form> 
                         <input type="email" className="form-control" placeholder="E-Mail-Adresse"></input>
                         <input type="passwort" className="form-control" placeholder="Passwort"></input>
-                        <h3 className="px-5 py-2">Passwort vergessen?</h3>
+                        <h3 className="px-2 py-2">Passwort vergessen?</h3>
                         <div className="mx-auto">Anmelden</div>
                     </form>
                 <p>Mit der Anmeldung erkläre stimme ich den AGBs <br/> und der Datenschutzerklärung zu.</p>
