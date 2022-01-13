@@ -34,15 +34,15 @@ const Login = styled.div`
     border-radius: 4px;
     border: 1px solid #707070;
     color: #707070;
-    
   }
+
   p {
     font-size: 13px;
     font-family: sofia-pro, sans-serif;
     font-weight: 300;
     color: #707070;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   div {
     width: 80%;
@@ -94,17 +94,17 @@ export const LoginPage = () => {
                 <h1 className="my-3">Sign in</h1>
             </Headline>
             <Login> 
-                <form > 
-                    <h2 className="px-4 py-2">Sind Sie bereits Kunde?</h2>
-                    <input type="email" className="form-control" placeholder="E-Mail-Adresse"></input>
-                    <input type="passwort" className="form-control" placeholder="Passwort"></input>
-                    <h3 className="px-3 py-2">Passwort vergessen?</h3>
-                    <div className="mx-auto">Anmelden</div>
-                    <p>Mit der Anmeldung erkläre stimme ich den AGBs <br/> und der Datenschutzerklärung zu.</p>
-                </form>
+                <h2 className="px-5 py-2">Sind Sie bereits Kunde?</h2>
+                    <form > 
+                        <input type="email" className="form-control" placeholder="E-Mail-Adresse"></input>
+                        <input type="passwort" className="form-control" placeholder="Passwort"></input>
+                        <h3 className="px-5 py-2">Passwort vergessen?</h3>
+                        <div className="mx-auto">Anmelden</div>
+                    </form>
+                <p>Mit der Anmeldung erkläre stimme ich den AGBs <br/> und der Datenschutzerklärung zu.</p>
             </Login>
             <Register>
-                <h2 className="px-3 py-2">Ein Kundenkonto lohnt sich!</h2>
+                <h2 className="px-5 py-2">Ein Kundenkonto lohnt sich!</h2>
                 <div className="mx-auto">Jetzt Konto anlegen</div>
                 <p>Als Gast fortfahren</p>
             </Register>
