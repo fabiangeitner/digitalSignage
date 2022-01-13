@@ -1,7 +1,7 @@
 import { Routes, Route, Router } from "react-router-dom";
 import "./App.css";
 import { Slideshow } from "./components/Slideshow/Slider";
-import { TestComponent } from "./components/TestComponent";
+import { Start } from "../src/components/Start";
 import { WelcomePage } from "./components/WelcomePage/WelcomePage";
 import { OverviewPage } from "./components/OverviewPage/OverviewPage";
 import { DetailPage } from "./components/DetailPage/DetailPage";
@@ -15,23 +15,24 @@ import { BookSearchResult } from "./components/Search/BookSearchResult";
 import { Handy } from "./components/Connection/Handy";
 import { Signage } from "./components/Connection/Signage";
 
-
 function App() {
   return (
     <div className="App">
       <Routes>
-        {/* <Route path="/" element={<Slider slides={SliderData} />} /> */}
+        <Route path="/" element={<Start />} />
+
+        <Route path="handy" element={<Handy />} />
+        <Route path="signage" element={<Signage />} />
+
+        {/* Digital Signage */}
+        <Route path="/slideshow" element={<Slideshow />} />
         <Route path="welcome" element={<WelcomePage />} />
-        <Route path="test" element={<TestComponent />} />
-        <Route path="/" element={<Slideshow />} />
         <Route path="overview" element={<OverviewPage />} />
         <Route path="detail" element={<DetailPage />} />
         <Route path="review" element={<CustomerReview />} />
         <Route path="cart" element={<Cart />} />
         <Route path="search" element={<BookSearch />} />
         <Route path="search_result" element={<BookSearchResult />} />
-        <Route path="handy" element={<Handy />} />
-        <Route path="signage" element={<Signage />} />
         <Route
           path="infoCheckout"
           element={
