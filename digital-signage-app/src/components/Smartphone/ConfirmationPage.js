@@ -23,8 +23,16 @@ const ConfirmationPageWrapper = styled.div`
     font-family: sofia-pro, sans-serif;
     font-weight: 300;
     color: #707070;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
   }
+  .test {
+    font-size: 13px;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    color: black; 
+    margin-bottom: 70px; 
+  }
+
   .qr {
     font-size: 13px;
     font-family: sofia-pro, sans-serif;
@@ -44,7 +52,7 @@ const Headline = styled.div`
 `;
 
 const CheckIcon = styled(BsCheckCircle)`
-font-size: 25px;
+font-size: 20px;
 color: #ff772f;
 margin-left: 45px
 `;
@@ -68,16 +76,18 @@ const Content = styled.div`
 export const ConfirmationPage = () => {
     return (
         <>
-        <ConfirmationPageWrapper className="container">
+        <ConfirmationPageWrapper >
             <Headline>
                 <h1 className="my-4">Warenkorb</h1>
             </Headline>
             <h2 className="px-5 py-2">Vielen Dank für Ihre Bestellung!</h2>
             <p className="px-5 py-2">Die Bestätigung wird an Ihre E-Mail gesendet.</p>
-             <Content>
-                <CheckIcon className="col-1"/>
-                <p className="col-10 offset-2 px-5 py-2">Bestellung im Laden abholbar!</p>
-            </Content>
+                <div className="container">
+                    <div className="row"> 
+                        <CheckIcon className="col"/>
+                        <p className="col-9 test">Bestellung im Laden abholbar!</p> 
+                    </div>
+                </div>      
             <p className="qr px-5 py-2">Zeigen Sie diesen QR-Code bei der Abholung im Laden vor.</p>
             <QrCode>
                 <img src={QRCode} alt="QR Code" />
