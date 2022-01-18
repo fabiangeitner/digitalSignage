@@ -20,6 +20,8 @@ import { SteuerelementZurück } from "./components/Smartphone/SteuerelementZurü
 import { SteuerelementWarenkorb } from "./components/Smartphone/SteuerelementWarenkorb";
 import { SteuerelementPay } from "./components/Smartphone/SteuerelementPay";
 import { BestellübersichtMobile } from "./components/Smartphone/BestellübersichtMobile";
+import { LoginPage } from "./components/LoginPage/LoginPage";
+import { ConfirmationPage } from "./components/Smartphone/ConfirmationPage";
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
         <Route path="steuerung-basket" element={<SteuerelementWarenkorb />} />
         <Route path="steuerung-pay" element={<SteuerelementPay />} />
         <Route path="bestellung" element={<BestellübersichtMobile />} />
+        <Route path="confirmationPage" element={<ConfirmationPage />} />
 
         {/* Digital Signage */}
         <Route path="slideshow" element={<Slideshow />} />
