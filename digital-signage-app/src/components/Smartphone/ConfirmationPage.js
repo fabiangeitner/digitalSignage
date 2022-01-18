@@ -60,19 +60,24 @@ text-align: center;
 }
 `;
 
+const Content = styled.div`
+
+`;
 
 
 export const ConfirmationPage = () => {
     return (
         <>
-        <ConfirmationPageWrapper>
+        <ConfirmationPageWrapper className="container">
             <Headline>
                 <h1 className="my-4">Warenkorb</h1>
             </Headline>
             <h2 className="px-5 py-2">Vielen Dank für Ihre Bestellung!</h2>
             <p className="px-5 py-2">Die Bestätigung wird an Ihre E-Mail gesendet.</p>
-            <CheckIcon />
-            <p className="px-5 py-2">Bestellung im Laden abholbar!</p>
+             <Content>
+                <CheckIcon className="col-1"/>
+                <p className="col-10 offset-2 px-5 py-2">Bestellung im Laden abholbar!</p>
+            </Content>
             <p className="qr px-5 py-2">Zeigen Sie diesen QR-Code bei der Abholung im Laden vor.</p>
             <QrCode>
                 <img src={QRCode} alt="QR Code" />
