@@ -16,6 +16,7 @@ import { Handy } from "./components/Connection/Handy";
 import { Signage } from "./components/Connection/Signage";
 import { SearchMobile } from "./components/Smartphone/SearchMobile";
 import { LoginPage } from "./components/LoginPage/LoginPage";
+import { ConfirmationPage } from "./components/Smartphone/ConfirmationPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         {/* Smartphone */}
         {/* LOGIN - SEITEN */}
         <Route path="searchMobile" element={<SearchMobile />} />
+        <Route path="confirmationPage" element={<ConfirmationPage />} />
 
         {/* Digital Signage */}
         <Route path="slideshow" element={<Slideshow />} />
