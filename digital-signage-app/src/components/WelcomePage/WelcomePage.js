@@ -21,7 +21,9 @@ export const WelcomePage = () => {
 
   React.useEffect(() => {
     window.addEventListener('storage', () => {
-      navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      if (localStorage.getItem('changeView')) {
+        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      }
     })
   })
 

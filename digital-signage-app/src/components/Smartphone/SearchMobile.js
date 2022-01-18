@@ -42,12 +42,16 @@ const Button = styled(Link)`
   bottom: 0;
 `;
 
+const handleInputChange = (e) => {
+  localStorage.setItem('input', e.target.value);
+}
+
 export const SearchMobile = () => {
   return (
     <>
       <SearchMobileWrapper>
         <ContainerInput>
-          <input type="text" id="input" />
+          <input type="text" id="input" onChange={handleInputChange}/>
         </ContainerInput>
         {/* <ButtonContainer>
           <Button to="">Suchen</Button>

@@ -36,12 +36,17 @@ const Suche = styled(RiSearch2Line)`
   color: #707070;
 `;
 
+const openSearch = (e) => {
+  localStorage.clear();
+  localStorage.setItem('changeView', 'search');
+}
+
 export const HeaderHandy = () => {
   return (
     <HeaderWrapper>
       <Logo>Storybook</Logo>
-      <Container to="">
-        <Suche />
+      <Container to="/searchMobile">
+        <Suche onClick={openSearch}/>
       </Container>
     </HeaderWrapper>
   );

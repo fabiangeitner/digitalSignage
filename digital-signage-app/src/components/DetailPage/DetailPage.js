@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Header } from "../Header/Header";
 
@@ -143,6 +143,17 @@ const FooterFilliale = styled.div`
 `;
 
 export const DetailPage = () => {
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('changeView')) {
+        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      }
+    })
+  })
+
   return (
     <>
       <ContainerTest>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 import { BiUser } from "react-icons/bi";
 import { BsArrowLeftShort } from "react-icons/bs";
@@ -97,6 +97,17 @@ const Username = styled.div`
 `;
 
 export const CustomerReview = () => {
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('changeView')) {
+        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      }
+    })
+  })
+
   return (
     <>
       <Header />

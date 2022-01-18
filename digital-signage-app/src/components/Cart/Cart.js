@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Header } from "../Header/Header";
 import stars from "../../Assets/just-stars.png";
 import quantity from "../../Assets/quantity.png";
@@ -131,6 +131,17 @@ const LinkTo = styled(Link)`
 `;
 
 export const Cart = () => {
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('changeView')) {
+        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      }
+    })
+  })
+
   return (
     <>
       <Header />

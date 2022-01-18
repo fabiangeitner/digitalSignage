@@ -64,11 +64,20 @@ const OptionHeadline = styled.h2`
 `;
 
 export const BookSearch = () => {
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('input')) {
+        document.getElementById('input').value = localStorage.getItem('input');
+      }
+    })
+  })
+
     return (
       <>
         <Header></Header>
         <Search>
-            <input type={"text"} placeholder="|"/>
+            <input type={"text"} placeholder="|" id="input"/>
         </Search>
         <FrequentlySearched>
             <Headline>Häufig gesucht</Headline>
