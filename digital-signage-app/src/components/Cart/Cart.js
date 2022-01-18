@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { Header } from "../Header/Header";
 import stars from "../../Assets/just-stars.png";
 import quantity from "../../Assets/quantity.png";
 import mastercard from "../../Assets/PaymentMethod/mastercard.png";
 import klarna from "../../Assets/PaymentMethod/klarna.png";
 import paypal from "../../Assets/PaymentMethod/paypal.png";
 
-import { Header } from "../Header/Header";
 import { Items } from "./CartItems";
 
 const Headline = styled.div`
