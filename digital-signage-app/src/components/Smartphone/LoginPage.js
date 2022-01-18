@@ -119,7 +119,7 @@ export const LoginPage = () => {
             <Register>
                 <h2 className="px-5 py-2">Ein Kundenkonto lohnt sich!</h2>
                 <div className="mx-auto">Jetzt Konto anlegen</div>
-                <Link to="/steuerung">
+                <Link to="/steuerung-back">
                   <p onClick={login}>Als Gast fortfahren</p>
                 </Link>
             </Register>
