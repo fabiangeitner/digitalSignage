@@ -23,14 +23,14 @@ const ConfirmationPageWrapper = styled.div`
     font-family: sofia-pro, sans-serif;
     font-weight: 300;
     color: #707070;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
   .test {
     font-size: 13px;
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     color: black; 
-    margin-bottom: 70px; 
+    margin-bottom: 60px; 
   }
 
   .qr {
