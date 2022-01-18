@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "./WelcomePage.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,7 +15,16 @@ const Headline = styled.h2`
   padding-top: 20px;
 `;
 
-export const WelcomePage = () => {
+export const WelcomePage = () => {  
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+    })
+  })
+
   return (
     <>
       <div className="containerTest">
