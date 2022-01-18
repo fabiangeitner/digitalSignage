@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 const Headline = styled.div`
   h1 {
     font-size: 28px;
@@ -92,6 +94,12 @@ const Register = styled.div`
         margin-bottom: 50px;
       }
 `;
+
+const login = (e) => {
+  localStorage.clear();
+  localStorage.setItem('changeView', 'overview');
+}
+
 export const LoginPage = () => {
     return (
         <div>
@@ -111,7 +119,9 @@ export const LoginPage = () => {
             <Register>
                 <h2 className="px-5 py-2">Ein Kundenkonto lohnt sich!</h2>
                 <div className="mx-auto">Jetzt Konto anlegen</div>
-                <p>Als Gast fortfahren</p>
+                <Link to="/steuerung">
+                  <p onClick={login}>Als Gast fortfahren</p>
+                </Link>
             </Register>
         </div>
     )
