@@ -8,7 +8,7 @@ import { BsCheckCircle } from "react-icons/bs";
 const ConfirmationPageWrapper = styled.div`
   width: 100%;
   background: #fff;
-  height: 90vh;
+  height: 87vh;
 
   h2 {
     font-size: 24px;
@@ -67,11 +67,6 @@ right: 0;
 text-align: center;
 }
 `;
-
-const Content = styled.div`
-
-`;
-
 
 export const ConfirmationPage = () => {
     return (
