@@ -16,7 +16,9 @@ import { Handy } from "./components/Connection/Handy";
 import { Signage } from "./components/Connection/Signage";
 import { SearchMobile } from "./components/Smartphone/SearchMobile";
 import { LoginPage } from "./components/Smartphone/LoginPage";
-import { Steuerelement } from "./components/Smartphone/Steuerelement";
+import { SteuerelementZurück } from "./components/Smartphone/SteuerelementZurück";
+import { SteuerelementWarenkorb } from "./components/Smartphone/SteuerelementWarenkorb";
+import { SteuerelementPay } from "./components/Smartphone/SteuerelementPay";
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
         {/* Smartphone */}
         <Route path="login" element={<LoginPage />} />
         <Route path="searchMobile" element={<SearchMobile />} />
-        <Route path="steuerung" element={<Steuerelement />} />
+        <Route path="steuerung-back" element={<SteuerelementZurück />} />
+        <Route path="steuerung-basket" element={<SteuerelementWarenkorb />} />
+        <Route path="steuerung-pay" element={<SteuerelementPay />} />
 
         {/* Digital Signage */}
         <Route path="slideshow" element={<Slideshow />} />
