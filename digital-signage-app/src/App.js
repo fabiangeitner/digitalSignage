@@ -14,6 +14,7 @@ import { BookSearch } from "./components/Search/BookSearch";
 import { BookSearchResult } from "./components/Search/BookSearchResult";
 import { Handy } from "./components/Connection/Handy";
 import { Signage } from "./components/Connection/Signage";
+import { SearchMobile } from "./components/Smartphone/SearchMobile";
 
 function App() {
   return (
@@ -24,8 +25,12 @@ function App() {
         <Route path="handy" element={<Handy />} />
         <Route path="signage" element={<Signage />} />
 
+        {/* Smartphone */}
+        {/* LOGIN - SEITEN */}
+        <Route path="searchMobile" element={<SearchMobile />} />
+
         {/* Digital Signage */}
-        <Route path="/slideshow" element={<Slideshow />} />
+        <Route path="slideshow" element={<Slideshow />} />
         <Route path="welcome" element={<WelcomePage />} />
         <Route path="overview" element={<OverviewPage />} />
         <Route path="detail" element={<DetailPage />} />
