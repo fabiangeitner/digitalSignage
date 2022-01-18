@@ -156,7 +156,7 @@ export const SteuerelementPay = () => {
           <Back to="">Zurück</Back>
         </ButtonFir>
         <ButtonSec>
-          <Pay to="">Weiter zur Kasse</Pay>
+          <Pay to="bestellung">Weiter zur Kasse</Pay>
         </ButtonSec>
       </SteuerungWrapper>
       <NavigationSmartphone />

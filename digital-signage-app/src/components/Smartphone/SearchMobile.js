@@ -23,6 +23,7 @@ const ContainerInput = styled.div`
     height: 8vh;
     margin-top: 10vh;
     margin-bottom: 20vh;
+    padding: 0 25px;
   }
 `;
 
@@ -43,15 +44,15 @@ const Button = styled(Link)`
 `;
 
 const handleInputChange = (e) => {
-  localStorage.setItem('input', e.target.value);
-}
+  localStorage.setItem("input", e.target.value);
+};
 
 export const SearchMobile = () => {
   return (
     <>
       <SearchMobileWrapper>
         <ContainerInput>
-          <input type="text" id="input" onChange={handleInputChange}/>
+          <input type="text" id="input" onChange={handleInputChange} />
         </ContainerInput>
         {/* <ButtonContainer>
           <Button to="">Suchen</Button>

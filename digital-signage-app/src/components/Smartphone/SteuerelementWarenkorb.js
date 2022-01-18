@@ -156,7 +156,7 @@ export const SteuerelementWarenkorb = () => {
           <Back to="">Zurück</Back>
         </ButtonFir>
         <ButtonSec>
-          <Pay to="">In den Warenkorb</Pay>
+          <Pay to="steuerung-pay">In den Warenkorb</Pay>
         </ButtonSec>
       </SteuerungWrapper>
       <NavigationSmartphone />

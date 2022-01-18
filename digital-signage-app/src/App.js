@@ -19,6 +19,7 @@ import { LoginPage } from "./components/Smartphone/LoginPage";
 import { SteuerelementZurück } from "./components/Smartphone/SteuerelementZurück";
 import { SteuerelementWarenkorb } from "./components/Smartphone/SteuerelementWarenkorb";
 import { SteuerelementPay } from "./components/Smartphone/SteuerelementPay";
+import { BestellübersichtMobile } from "./components/Smartphone/BestellübersichtMobile";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="steuerung-back" element={<SteuerelementZurück />} />
         <Route path="steuerung-basket" element={<SteuerelementWarenkorb />} />
         <Route path="steuerung-pay" element={<SteuerelementPay />} />
+        <Route path="bestellung" element={<BestellübersichtMobile />} />
 
         {/* Digital Signage */}
         <Route path="slideshow" element={<Slideshow />} />
