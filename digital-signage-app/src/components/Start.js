@@ -112,7 +112,7 @@ export const Start = () => {
           <ButtonDark to="/slideshow">Digital Signage</ButtonDark>
         </Btndark>
         <BtnLight>
-          <ButtonLight to="/">Smartphone</ButtonLight>
+          <ButtonLight to="/login">Smartphone</ButtonLight>
         </BtnLight>
       </Container>
     </div>

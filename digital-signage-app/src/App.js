@@ -15,7 +15,8 @@ import { BookSearchResult } from "./components/Search/BookSearchResult";
 import { Handy } from "./components/Connection/Handy";
 import { Signage } from "./components/Connection/Signage";
 import { SearchMobile } from "./components/Smartphone/SearchMobile";
-import { LoginPage } from "./components/LoginPage/LoginPage";
+import { LoginPage } from "./components/Smartphone/LoginPage";
+import { Steuerelement } from "./components/Smartphone/Steuerelement";
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
         <Route path="signage" element={<Signage />} />
 
         {/* Smartphone */}
-        {/* LOGIN - SEITEN */}
+        <Route path="login" element={<LoginPage />} />
         <Route path="searchMobile" element={<SearchMobile />} />
+        <Route path="steuerung" element={<Steuerelement />} />
 
         {/* Digital Signage */}
         <Route path="slideshow" element={<Slideshow />} />
