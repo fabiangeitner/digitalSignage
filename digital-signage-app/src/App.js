@@ -20,7 +20,6 @@ import { SteuerelementZurück } from "./components/Smartphone/SteuerelementZurü
 import { SteuerelementWarenkorb } from "./components/Smartphone/SteuerelementWarenkorb";
 import { SteuerelementPay } from "./components/Smartphone/SteuerelementPay";
 import { BestellübersichtMobile } from "./components/Smartphone/BestellübersichtMobile";
-import { LoginPage } from "./components/LoginPage/LoginPage";
 import { ConfirmationPage } from "./components/Smartphone/ConfirmationPage";
 
 function App() {

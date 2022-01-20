@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Slider.css";
 
 import { Carousel } from "react-bootstrap";
@@ -7,6 +7,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { SliderData } from "./SliderData";
 
 export const Slideshow = () => {
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('changeView')) {
+        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      }
+    })
+  })
+
   return (
     <>
       <div className="containerTest">
