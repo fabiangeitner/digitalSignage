@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# Bedienungsanleitung unserer Digital-Signage-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br> <br>
 
-## Available Scripts
+# 1. Vorbereitung
 
-In the project directory, you can run:
+Link zum Repository: [Digital Signage App](https://github.com/fabiangeitner/digitalSignage.git)
+
+<br>
+
+## 1. Schritt: Projekt öffnen
+
+Öffnen Sie das Projekt: `digital-signage-app`
+
+<br>
+
+## 2. Schritt: Projekt starten
+
+Starten Sie die Anwendung lokal auf Ihren Rechner
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 3. Schritt: Applikation öffnen
 
-### `npm test`
+Applikation öffnet sich im lokalen Browser unter `localhost`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 4. Schritt: Startscreen
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Auf der Startseite können Sie nun die jeweiligen Endgeräte auswählen. Öffnen Sie beide Varianten in zwei verschiedenen Tabs und gehen Sie zu den Entwicklertools.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Für `Smartphone` wählen Sie nun die Dimension iPhoneX aus
+  (375px x 812px)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Danach wählen Sie für den `digital Signage` die Dimension iPhone6/7/8 aus (375px x 667px)
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 5. Schritt: Split Screen
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im optimal Fall die beiden Browser im Split Screen nebeinander platzieren.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br> <br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<hr>
 
-## Learn More
+## Laden Sie sich die aktuellen Versionen dieser Technologien auf Ihren PC herunter.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### node.js:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Node installieren](https://nodejs.org/en/)
 
-### Code Splitting
+### npm:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Npm installieren](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
-### Analyzing the Bundle Size
+#
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br> <br>
 
-### Making a Progressive Web App
+# 2. Szenario (Anwendungsbeispiel)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+## 1.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Klicken Sie auf den QR-Code, welcher auf der Slideshow im Digital Signage angezeigt wird.
 
-### Deployment
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 2.
 
-### `npm run build` fails to minify
+Klicken Sie danach auf der Login-Seite auf “Als Gast fortfahren”
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+## 3.
+
+Wählen Sie anschließend das Dropdown-Menü mittels der Steuerung auf dem Smartphone (Pfeil nach oben) aus
+
+<br>
+
+## 4.
+
+Navigieren Sie durch Klicks auf den Pfeil nach unten in der Smartphone-Steuerung zu “Romane” und bestätigen Sie ihre Auswahl mit Klick auf “OK”
+
+<br>
+
+## 5.
+
+Wählen Sie das Buch “Ein ganzes halbes Jahr”, durch Klick auf “OK” im Steuerelement, aus.
+
+<br>
+
+## 6.
+
+Navigieren Sie auf der Produktdetailseite zu den Bewertungen, durch Klick auf den Pfeil nach oben, und wählen Sie dieses durch Klick auf “OK” im Steuerelement aus
+
+<br>
+
+## 7.
+
+Klicken Sie daraufhin auf dem Smartphone Screen den Button “In den Warenkorb”
+
+<br>
+
+## 8.
+
+Klicken Sie anschließend auf den Button “Weiter zur Kasse”
+
+<br>
+
+## 9.
+
+Geben Sie den Benutzername und das Passwort am Smartphone ein und bestätigen Sie Ihre Eingabe mit Klick auf den Button “Anmelden”
+
+<br>
+
+## 10.
+
+Klicken Sie anschließend auf den Button “Jetzt bezahlen”
+
+<br>
+
+## 11.
+
+`Optional:` Der Einkauf ist nun abgeschlossen und Sie können den QR-Code an der Kasse im Laden vorzeigen
+
+<br>
