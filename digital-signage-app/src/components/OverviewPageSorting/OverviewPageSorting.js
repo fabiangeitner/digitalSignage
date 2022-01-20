@@ -12,9 +12,9 @@ import RomanEmpfehlung1 from "../../Assets/Books/buch3.jpeg";
 import RomanEmpfehlung2 from "../../Assets/Books/buch1.jpeg";
 import RomanEmpfehlung3 from "../../Assets/Books/3buch.jpeg";
 import RomanEmpfehlung4 from "../../Assets/Books/4buch.jpeg";
-import Beliebt1 from "../../Assets/Books/item2.png";
+import Beliebt1 from "../../Assets/Books/1buch.jpeg";
 import Beliebt2 from "../../Assets/Books/buch2.jpeg";
-import Beliebt3 from "../../Assets/Books/buch3.jpeg";
+import Beliebt3 from "../../Assets/Books/2buch.jpeg";
 import Beliebt4 from "../../Assets/Books/item2.png";
 
 
@@ -249,14 +249,14 @@ export const OverviewPageSorting = () => {
           </CarouselItemAnzeige>
           <CarouselText className="row">
             <CarouTxt className="col-3">
-              <h2>Küpfel Kobr Funkenmord</h2>
-              <h3>Volker Klüpfel</h3>
-              <p>12 EUR</p>
+              <h2>Ostfriesen Sturm</h2>
+              <h3>Klaus-Peter Wolf</h3>
+              <p>16 EUR</p>
             </CarouTxt>
             <CarouTxt className="col-3">
-              <h2>Geschichte von PaSalt</h2>
-              <h3>Lucinda Riley</h3>
-              <p>15 EUR</p>
+              <h2>Ostfriesen Grab</h2>
+              <h3>Klaus-Peter Wolf</h3>
+              <p>16 EUR</p>
             </CarouTxt>
             <CarouTxt className="col-3">
               <h2>Herren von Winterfell</h2>
@@ -287,9 +287,9 @@ export const OverviewPageSorting = () => {
           </CarouselItemAnzeige>
           <CarouselText className="row">
             <CarouTxt className="col-3">
-              <h2>Ostfriesen Grab</h2>
-              <h3>Klaus-Peter Wolf</h3>
-              <p>16 EUR</p>
+              <h2>Küpfel Kobr Funkenmord</h2>
+              <h3>Volker Klüpfel</h3>
+              <p>12 EUR</p>
             </CarouTxt>
             <CarouTxt className="col-3">
               <h2>Selection Roman</h2>
@@ -297,9 +297,9 @@ export const OverviewPageSorting = () => {
               <p>13 EUR</p>
             </CarouTxt>
             <CarouTxt className="col-3">
-              <h2>Ostfriesen Sturm</h2>
-              <h3>Klaus-Peter Wolf</h3>
-              <p>16 EUR</p>
+              <h2>Geschichte von PaSalt</h2>
+              <h3>Lucinda Riley</h3>
+              <p>15 EUR</p>
             </CarouTxt>
             <CarouTxt className="col-3"></CarouTxt>
           </CarouselText>
