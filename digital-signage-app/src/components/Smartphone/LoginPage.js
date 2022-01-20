@@ -118,7 +118,7 @@ export const LoginPage = () => {
             placeholder="E-Mail-Adresse"
           ></input>
           <input
-            type="passwort"
+            type="password"
             className="form-control"
             placeholder="Passwort"
           ></input>

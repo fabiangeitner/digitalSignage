@@ -25,48 +25,92 @@ const NavigationWrapper = styled.div`
   }
 `;
 
-const Home = styled(AiOutlineHome)`
-  font-size: 30px;
-  width: 25vw;
+const HomeLink = styled(Link)`
+  text-decoration: none;
+  color: #000000;
+  :hover {
+    color: #ff772f;
+  }
+`;
+const HerzLink = styled(Link)`
+  text-decoration: none;
+  color: #000000;
 
   :hover {
     color: #ff772f;
   }
+`;
+const BasketLink = styled(Link)`
+  text-decoration: none;
+  color: #000000;
+
+  :hover {
+    color: #ff772f;
+  }
+`;
+const UserLink = styled(Link)`
+  text-decoration: none;
+  color: #000000;
+
+  :hover {
+    color: #ff772f;
+  }
+`;
+
+const Home = styled(AiOutlineHome)`
+  font-size: 30px;
+  width: 25vw;
 `;
 const Herz = styled(AiOutlineHeart)`
   font-size: 30px;
   width: 25vw;
-
-  :hover {
-    color: #ff772f;
-  }
 `;
 const Basket = styled(BsHandbag)`
   font-size: 30px;
   width: 25vw;
-
-  :hover {
-    color: #ff772f;
-  }
 `;
 const User = styled(AiOutlineUser)`
   font-size: 30px;
   width: 25vw;
-
-  :hover {
-    color: #ff772f;
-  }
 `;
+
+const home = (e) => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "overview");
+};
+
+const herz = (e) => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "infoFavorit");
+};
+
+const basket = (e) => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "cart");
+};
+
+const user = (e) => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "infoProfile");
+};
 
 export const NavigationSmartphone = () => {
   return (
     <>
       <NavigationWrapper>
         <ul>
-          <Home to="/" />
-          <Herz to="/" />
-          <Basket to="/" />
-          <User to="/" />
+          <HomeLink to="/steuerung-back">
+            <Home onClick={home} />
+          </HomeLink>
+          <HerzLink to="/login">
+            <Herz onClick={herz} />
+          </HerzLink>
+          <BasketLink to="/steuerung-pay">
+            <Basket onClick={basket} />
+          </BasketLink>
+          <UserLink to="/login">
+            <User onClick={user} />
+          </UserLink>
         </ul>
       </NavigationWrapper>
     </>
