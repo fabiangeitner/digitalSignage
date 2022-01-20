@@ -65,34 +65,68 @@ Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im o
 
 <br>
 
-Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten im optimal Fall die beiden Browser im Split Screen nebeinander platziert werden.
+## 1.
 
-## 1. Schritt
-
-Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im optimal Fall die beiden Browser im Split Screen nebeinander platzieren.
+Klicken Sie auf den QR-Code, welcher auf der Slideshow im Digital Signage angezeigt wird.
 
 <br>
 
-## 2. Schritt
+## 2.
 
-Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im optimal Fall die beiden Browser im Split Screen nebeinander platzieren.
-
-<br>
-
-## 3. Schritt
-
-Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im optimal Fall die beiden Browser im Split Screen nebeinander platzieren.
+Klicken Sie danach auf der Login-Seite auf “Als Gast fortfahren”
 
 <br>
 
-## 4. Schritt
+## 3.
 
-Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im optimal Fall die beiden Browser im Split Screen nebeinander platzieren.
+Wählen Sie anschließend das Dropdown-Menü mittels der Steuerung auf dem Smartphone (Pfeil nach oben) aus
 
 <br>
 
-## 5. Schritt
+## 4.
 
-Damit die Simulation realitätsgetreu nachgestellt werden kann, sollten Sie im optimal Fall die beiden Browser im Split Screen nebeinander platzieren.
+Navigieren Sie durch Klicks auf den Pfeil nach unten in der Smartphone-Steuerung zu “Romane” und bestätigen Sie ihre Auswahl mit Klick auf “OK”
+
+<br>
+
+## 5.
+
+Wählen Sie das Buch “Ein ganzes halbes Jahr”, durch Klick auf “OK” im Steuerelement, aus.
+
+<br>
+
+## 6.
+
+Navigieren Sie auf der Produktdetailseite zu den Bewertungen, durch Klick auf den Pfeil nach oben, und wählen Sie dieses durch Klick auf “OK” im Steuerelement aus
+
+<br>
+
+## 7.
+
+Klicken Sie daraufhin auf dem Smartphone Screen den Button “In den Warenkorb”
+
+<br>
+
+## 8.
+
+Klicken Sie anschließend auf den Button “Weiter zur Kasse”
+
+<br>
+
+## 9.
+
+Geben Sie den Benutzername und das Passwort am Smartphone ein und bestätigen Sie Ihre Eingabe mit Klick auf den Button “Anmelden”
+
+<br>
+
+## 10.
+
+Klicken Sie anschließend auf den Button “Jetzt bezahlen”
+
+<br>
+
+## 11.
+
+`Optional:` Der Einkauf ist nun abgeschlossen und Sie können den QR-Code an der Kasse im Laden vorzeigen
 
 <br>
