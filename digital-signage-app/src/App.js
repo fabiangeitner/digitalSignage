@@ -20,8 +20,8 @@ import { SteuerelementZurück } from "./components/Smartphone/SteuerelementZurü
 import { SteuerelementWarenkorb } from "./components/Smartphone/SteuerelementWarenkorb";
 import { SteuerelementPay } from "./components/Smartphone/SteuerelementPay";
 import { BestellübersichtMobile } from "./components/Smartphone/BestellübersichtMobile";
-import { LoginPage } from "./components/LoginPage/LoginPage";
 import { ConfirmationPage } from "./components/Smartphone/ConfirmationPage";
+import { OverviewPageSorting } from "./components/OverviewPageSorting/OverviewPageSorting";
 
 function App() {
   return (
@@ -45,6 +45,7 @@ function App() {
         <Route path="slideshow" element={<Slideshow />} />
         <Route path="welcome" element={<WelcomePage />} />
         <Route path="overview" element={<OverviewPage />} />
+        <Route path="overview_sorting" element={<OverviewPageSorting />} />
         <Route path="detail" element={<DetailPage />} />
         <Route path="review" element={<CustomerReview />} />
         <Route path="cart" element={<Cart />} />

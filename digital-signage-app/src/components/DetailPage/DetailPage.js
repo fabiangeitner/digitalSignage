@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Header } from "../Header/Header";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import book from "../../Assets/Books/Bestsellerbuch2.jpeg";
+import book from "../../Assets/Books/buch4.jpeg";
 import stars from "../../Assets/stars.png";
 import heart from "../../Assets/heart.png";
 

@@ -3,19 +3,20 @@ import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 
 import { Header } from "../Header/Header";
-import { DropdownHeader } from "../Header/Dropdown";
+import { DropdownRoman } from "../Header/DropdownRoman";
 
-import Bestseller1 from "../../Assets/Books/Bestsellerbuch1.jpeg";
-import Bestseller2 from "../../Assets/Books/Bestsellerbuch2.jpeg";
-import Bestseller3 from "../../Assets/Books/Bestsellerbuch3.jpeg";
-import Empfehlung1 from "../../Assets/Books/1buch.jpeg";
-import Empfehlung2 from "../../Assets/Books/2buch.jpeg";
-import Empfehlung3 from "../../Assets/Books/3buch.jpeg";
-import Empfehlung4 from "../../Assets/Books/4buch.jpeg";
-import Beliebt1 from "../../Assets/Books/buch1.jpeg";
+import RomanBestseller1 from "../../Assets/Books/Book-IfIStay.png";
+import RomanBestseller2 from "../../Assets/Books/buch4.jpeg";
+import RomanBestseller3 from "../../Assets/Books/item3.png";
+import RomanEmpfehlung1 from "../../Assets/Books/buch3.jpeg";
+import RomanEmpfehlung2 from "../../Assets/Books/buch1.jpeg";
+import RomanEmpfehlung3 from "../../Assets/Books/3buch.jpeg";
+import RomanEmpfehlung4 from "../../Assets/Books/4buch.jpeg";
+import Beliebt1 from "../../Assets/Books/item2.png";
 import Beliebt2 from "../../Assets/Books/buch2.jpeg";
 import Beliebt3 from "../../Assets/Books/buch3.jpeg";
-import Beliebt4 from "../../Assets/Books/buch4.jpeg";
+import Beliebt4 from "../../Assets/Books/item2.png";
+
 
 const Headline = styled.h2`
   font-size: 12px;
@@ -197,7 +198,7 @@ const CarouTxt = styled.div`
   }
 `;
 
-export const OverviewPage = () => {
+export const OverviewPageSorting = () => {
 
   const navigate = useNavigate();
 
@@ -212,36 +213,36 @@ export const OverviewPage = () => {
   return (
     <>
       <Header />
-      <DropdownHeader />
+      <DropdownRoman />
       <BestsellerWrapper>
-        <Headline>Bestseller</Headline>
+        <Headline>Roman Bestseller</Headline>
         <CarouselBestseller className="row">
           <CarouselItemBestseller className="col-4">
-            <img src={Bestseller1} alt="Bestseller1" />
+            <img src={RomanBestseller1} alt="Bestseller1" />
           </CarouselItemBestseller>
-          <CarouselItemBestsellerMiddle to="" className="col-4">
-            <img src={Bestseller2} alt="Bestseller2" />
+          <CarouselItemBestsellerMiddle to="/detail" className="col-4">
+            <img src={RomanBestseller2} alt="Bestseller2" />
           </CarouselItemBestsellerMiddle>
           <CarouselItemBestseller className="col-4">
-            <img src={Bestseller3} alt="Bestseller3" />
+            <img src={RomanBestseller3} alt="Bestseller3" />
           </CarouselItemBestseller>
         </CarouselBestseller>
       </BestsellerWrapper>
 
       <RecomWrapper>
-        <Headline>Für dich empfohlen</Headline>
+        <Headline>Für dich empfohle Romane</Headline>
         <Carousel className="row">
           <CarouselItem className="col-3">
-            <img src={Empfehlung1} alt="Empfehlungen1" />
+            <img src={RomanEmpfehlung1} alt="Empfehlungen1" />
           </CarouselItem>
           <CarouselItemMiddle className="col-3">
-            <img src={Empfehlung2} alt="Empfehlungen2" />
+            <img src={RomanEmpfehlung2} alt="Empfehlungen2" />
           </CarouselItemMiddle>
           <CarouselItem className="col-3">
-            <img src={Empfehlung3} alt="Empfehlungen3" />
+            <img src={RomanEmpfehlung3} alt="Empfehlungen3" />
           </CarouselItem>
           <CarouselItemAnzeige className="col-3">
-            <img src={Empfehlung4} alt="Empfehlungen4" />
+            <img src={RomanEmpfehlung4} alt="Empfehlungen4" />
             <h2>
               mehr <br /> Anzeigen
             </h2>
@@ -267,7 +268,7 @@ export const OverviewPage = () => {
         </Carousel>
       </RecomWrapper>
       <PopularWrapper>
-        <Headline>Beliebt diesen Monat</Headline>
+        <Headline>Beliebte Romane diesen Monat</Headline>
         <Carousel className="row">
           <CarouselItem className="col-3">
             <img src={Beliebt1} alt="Bliebt1" />

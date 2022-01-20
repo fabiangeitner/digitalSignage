@@ -21,7 +21,7 @@ const IconWrapper = styled(BsHandbag)`
   }
 `;
 
-export const DropdownHeader = () => {
+export const DropdownRoman = () => {
   return (
     <Wrapper className="container">
       <DropdownWrapper className="row">
@@ -30,10 +30,10 @@ export const DropdownHeader = () => {
           <DropdownButton
             id="dropdown-basic-button"
             variant="secondary"
-            title="Alle Kategorien"
+            title="Romane"
           >
+            <Dropdown.Item href="/overview">Alle Kategorien</Dropdown.Item>
             <Dropdown.Item href="/overview">Englische Bücher</Dropdown.Item>
-            <Dropdown.Item href="/overview_sorting">Romane</Dropdown.Item>
             <Dropdown.Item href="/overview">Science Fiction</Dropdown.Item>
             <Dropdown.Item href="/overview">Horror</Dropdown.Item>
             <Dropdown.Item href="/overview">Sachbücher</Dropdown.Item>
