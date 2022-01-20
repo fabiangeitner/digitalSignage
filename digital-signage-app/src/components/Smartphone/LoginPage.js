@@ -104,6 +104,15 @@ const login = (e) => {
 };
 
 export const LoginPage = () => {
+
+  React.useEffect(() => {
+    window.onload = () => {
+      console.log("test");
+      localStorage.clear();
+      localStorage.setItem("changeView", "welcome");
+    }
+  })
+
   return (
     <div>
       <Headline>
@@ -118,7 +127,7 @@ export const LoginPage = () => {
             placeholder="E-Mail-Adresse"
           ></input>
           <input
-            type="passwort"
+            type="password"
             className="form-control"
             placeholder="Passwort"
           ></input>
