@@ -36,7 +36,7 @@ const Suche = styled(RiSearch2Line)`
   color: #707070;
 `;
 
-const openSearch = (e) => {
+const openSearch = () => {
   localStorage.clear();
   localStorage.setItem('changeView', 'search');
 }

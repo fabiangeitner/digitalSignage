@@ -151,6 +151,63 @@ export const DetailPage = () => {
       if (localStorage.getItem('changeView')) {
         navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
       }
+      if (localStorage.getItem('direction-basket')) {
+        //Variablen zur Positionsbestimmung
+        let positionVertic = 1;
+        let direction = localStorage.getItem('direction-basket');
+
+        //gab es bereits eine Position
+        if(localStorage.getItem('position-vertical')) {
+          positionVertic = Number(localStorage.getItem('position-vertical'));
+        }
+
+        localStorage.clear();
+
+        //aktuellen Rahmen eines Bildes entfernen
+        let image = document.getElementById(`position${positionVertic}`);
+        image.style.border = '';
+        image.style.borderRadius = '';
+
+        //Position je nach Richtung anpassen
+        switch (direction) {
+          case 'top':
+            if ( positionVertic !== 0) {
+              positionVertic = positionVertic - 1 ;
+            }
+            break;
+          case 'bottom': 
+            if (positionVertic !== 2) {
+              positionVertic = positionVertic + 1;
+            }
+            break;
+        }
+
+        //neues Bild Rahmen hinzufügen
+        document.getElementById(`position${positionVertic}`).style.border = '4px solid #ff772f';
+        document.getElementById(`position${positionVertic}`).style.borderRadius = '3px';
+
+        //Position speichern
+        localStorage.setItem('position-vertical', positionVertic);
+      }
+      if (localStorage.getItem('submit-basket')) {
+        //Variablen zur Positionsbestimmung
+        let positionVertic = 1;
+
+        //gab es bereits eine Position
+        if(localStorage.getItem('position-vertical')) {
+          positionVertic = Number(localStorage.getItem('position-vertical'));
+        }
+
+        localStorage.clear();
+
+        if (positionVertic === 1) {
+          localStorage.setItem('changeView', 'cart')
+          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        } else {
+          //Position speichern
+          localStorage.setItem('position-vertical', positionVertic);
+        }
+      }
     })
   })
 
@@ -161,14 +218,14 @@ export const DetailPage = () => {
         <Content>
           <ImageStars>
             <LinkTo to="/review">
-              <img className="stars mt-2" src={stars} alt="Sterne Bewertung" />
+              <img className="stars mt-2" src={stars} alt="Sterne Bewertung" id='position0'/>
             </LinkTo>
           </ImageStars>
           <LinkTo to="/cart">
-            <img className="book my-2" src={book} alt="Buch groß" />
+            <img className="book my-2" src={book} alt="Buch groß" id='position1' style={{border: "4px solid #ff772f", borderRadius: "3px"}}/>
           </LinkTo>
           <WrapperText>
-            <img className="heart my-1" src={heart} alt="favoriten" />
+            <img className="heart my-1" src={heart} alt="favoriten" id='position2'/>
             <h2 class="">Mein Kopf, ein Universum</h2>
             <p id="subtitle">272 Seiten, Taschenbuch, 2021</p>
             <p id="price">15 EUR</p>
