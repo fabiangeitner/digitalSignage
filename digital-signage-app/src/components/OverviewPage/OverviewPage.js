@@ -280,7 +280,6 @@ export const OverviewPage = () => {
         //Variablen zur Positionsbestimmung
         let positionVertic = 1;
         let positionHoriz = 1;
-        let submit = localStorage.getItem('submit');
 
         //gab es bereits eine Position
         if(localStorage.getItem('position-vertical')) {

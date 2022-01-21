@@ -189,6 +189,25 @@ export const DetailPage = () => {
         //Position speichern
         localStorage.setItem('position-vertical', positionVertic);
       }
+      if (localStorage.getItem('submit-basket')) {
+        //Variablen zur Positionsbestimmung
+        let positionVertic = 1;
+
+        //gab es bereits eine Position
+        if(localStorage.getItem('position-vertical')) {
+          positionVertic = Number(localStorage.getItem('position-vertical'));
+        }
+
+        localStorage.clear();
+
+        if (positionVertic === 1) {
+          localStorage.setItem('changeView', 'cart')
+          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        } else {
+          //Position speichern
+          localStorage.setItem('position-vertical', positionVertic);
+        }
+      }
     })
   })
 
