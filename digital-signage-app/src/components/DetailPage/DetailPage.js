@@ -149,7 +149,12 @@ export const DetailPage = () => {
   React.useEffect(() => {
     window.addEventListener('storage', () => {
       if (localStorage.getItem('changeView')) {
-        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        if (localStorage.getItem('changeView') === 'cart-pay') {
+          localStorage.setItem('changeView', 'cart');
+          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        } else {
+          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        }
       }
       if (localStorage.getItem('direction-basket')) {
         //Variablen zur Positionsbestimmung
@@ -200,8 +205,8 @@ export const DetailPage = () => {
 
         localStorage.clear();
 
-        if (positionVertic === 1) {
-          localStorage.setItem('changeView', 'cart')
+        if (positionVertic === 0) {
+          localStorage.setItem('changeView', 'review')
           navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
         } else {
           //Position speichern

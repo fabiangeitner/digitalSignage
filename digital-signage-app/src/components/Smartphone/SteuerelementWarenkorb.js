@@ -162,17 +162,27 @@ const submit = () => {
   localStorage.setItem("submit-basket", "true");
 }
 
+const back = () => {
+  if (localStorage.getItem('changeView') === 'review') {
+    localStorage.clear();
+    localStorage.setItem("changeView", "detail");
+  }
+}
+
+const addToCart = () => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "cart-pay");
+}
+
 export const SteuerelementWarenkorb = () => {
 
   const navigate = useNavigate();
 
   React.useEffect(() => {
     window.addEventListener('storage', () => {
-      if (localStorage.getItem('changeView')) {
-        if (localStorage.getItem('changeView') === 'cart') {
-          navigate(`/steuerung-pay`, {replace: true}); //eslint-disable-line
-        }
-      } 
+      if (localStorage.getItem('changeView') === 'cart') {
+        navigate(`/steuerung-pay`, {replace: true}); //eslint-disable-line
+      }
     })
   })
 
@@ -198,10 +208,10 @@ export const SteuerelementWarenkorb = () => {
           </Element>
         </Container>
         <ButtonFir>
-          <Back to="">Zurück</Back>
+          <Back to="" onClick={back}>Zurück</Back>
         </ButtonFir>
         <ButtonSec>
-          <Pay to="steuerung-pay">In den Warenkorb</Pay>
+          <Pay to="steuerung-pay" onClick={addToCart}>In den Warenkorb</Pay>
         </ButtonSec>
       </SteuerungWrapper>
       <NavigationSmartphone />
