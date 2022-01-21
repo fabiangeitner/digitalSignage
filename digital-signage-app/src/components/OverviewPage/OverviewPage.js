@@ -57,10 +57,14 @@ const CarouselItemBestsellerMiddle = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  img {
-    width: 120%;
+  #position1-1 {
     border: 4px solid #ff772f;
     border-radius: 3px;
+  }
+
+  img {
+    width: 120%;
+
     @media (min-width: 800px) {
       width: 70%;
     }
@@ -206,24 +210,95 @@ export const OverviewPage = () => {
       if (localStorage.getItem('changeView')) {
         navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
       }
+      if (localStorage.getItem('direction')) {
+        //Variablen zur Positionsbestimmung
+        let positionVertic = 1;
+        let positionHoriz = 1;
+        let direction = localStorage.getItem('direction');
+
+        //gab es bereits eine Position
+        if(localStorage.getItem('position-vertical')) {
+          positionVertic = Number(localStorage.getItem('position-vertical'));
+        }
+        if (localStorage.getItem('position-horizontal')) {
+          positionHoriz = Number(localStorage.getItem('position-horizontal'));
+        }
+
+        localStorage.clear();
+
+        //aktuellen Rahmen eines Bildes entfernen
+        let image = document.getElementById(`position${positionVertic}-${positionHoriz}`);
+        image.style.border = '';
+        image.style.borderRadius = '';
+
+        //Position je nach Richtung anpassen
+        switch (direction) {
+          case 'top':
+            if ( positionVertic !== 0) {
+              positionVertic = positionVertic - 1 ;
+              if (positionVertic === 1) {
+                positionHoriz = 1;
+              } else {
+                positionHoriz = 0;
+              }
+            }
+            break;
+          case 'bottom': 
+            if (positionVertic !== 3) {
+              positionVertic = positionVertic + 1;
+              if (positionVertic === 1) {
+                positionHoriz = 1;
+              } else {
+                positionHoriz = 0;
+              }
+            }
+            break;
+          case 'right': 
+            if (positionVertic !== 0) {
+              if (positionHoriz !== 2) {
+                positionHoriz = positionHoriz + 1;
+              }
+            } else {
+              positionHoriz = 0
+            }
+            break;
+          case 'left': 
+            if (positionVertic !== 0) {
+              if (positionHoriz !== 0) {
+                positionHoriz = positionHoriz - 1;
+              }
+            } else {
+              positionHoriz = 0
+            }
+            break;
+        }
+
+        //neues Bild Rahmen hinzufügen
+        document.getElementById(`position${positionVertic}-${positionHoriz}`).style.border = '4px solid #ff772f';
+        document.getElementById(`position${positionVertic}-${positionHoriz}`).style.borderRadius = '3px';
+
+        //Position speichern
+        localStorage.setItem('position-horizontal', positionHoriz);
+        localStorage.setItem('position-vertical', positionVertic);
+      }
     })
   })
 
   return (
     <>
       <Header />
-      <DropdownHeader />
+      <DropdownHeader id='position0-0'/>
       <BestsellerWrapper>
         <Headline>Bestseller</Headline>
         <CarouselBestseller className="row">
           <CarouselItemBestseller className="col-4">
-            <img src={Bestseller1} alt="Bestseller1" />
+            <img src={Bestseller1} alt="Bestseller1" id='position1-0'/>
           </CarouselItemBestseller>
           <CarouselItemBestsellerMiddle to="/detail" className="col-4">
-            <img src={Bestseller2} alt="Bestseller2" />
+            <img src={Bestseller2} alt="Bestseller2" id='position1-1'/>
           </CarouselItemBestsellerMiddle>
           <CarouselItemBestseller className="col-4">
-            <img src={Bestseller3} alt="Bestseller3" />
+            <img src={Bestseller3} alt="Bestseller3" id='position1-2'/>
           </CarouselItemBestseller>
         </CarouselBestseller>
       </BestsellerWrapper>
@@ -232,13 +307,13 @@ export const OverviewPage = () => {
         <Headline>Für dich empfohlen</Headline>
         <Carousel className="row">
           <CarouselItem className="col-3">
-            <img src={Empfehlung1} alt="Empfehlungen1" />
+            <img src={Empfehlung1} alt="Empfehlungen1" id='position2-0'/>
           </CarouselItem>
           <CarouselItemMiddle className="col-3">
-            <img src={Empfehlung2} alt="Empfehlungen2" />
+            <img src={Empfehlung2} alt="Empfehlungen2" id='position2-1'/>
           </CarouselItemMiddle>
           <CarouselItem className="col-3">
-            <img src={Empfehlung3} alt="Empfehlungen3" />
+            <img src={Empfehlung3} alt="Empfehlungen3" id='position2-2'/>
           </CarouselItem>
           <CarouselItemAnzeige className="col-3">
             <img src={Empfehlung4} alt="Empfehlungen4" />
@@ -270,13 +345,13 @@ export const OverviewPage = () => {
         <Headline>Beliebt diesen Monat</Headline>
         <Carousel className="row">
           <CarouselItem className="col-3">
-            <img src={Beliebt1} alt="Bliebt1" />
+            <img src={Beliebt1} alt="Bliebt1" id='position3-0'/>
           </CarouselItem>
           <CarouselItemMiddle className="col-3">
-            <img src={Beliebt2} alt="Beliebt2" />
+            <img src={Beliebt2} alt="Beliebt2" id='position3-1'/>
           </CarouselItemMiddle>
           <CarouselItem className="col-3">
-            <img src={Beliebt3} alt="Beliebt3" />
+            <img src={Beliebt3} alt="Beliebt3" id='position3-2'/>
           </CarouselItem>
           <CarouselItemAnzeige className="col-3">
             <img src={Beliebt4} alt="Beliebt4" />

@@ -117,6 +117,27 @@ const Back = styled(Link)`
   color: #707070;
 `;
 
+const changeDirection = (direction) => {
+  //Variablen zur Positionsbestimmung
+  let positionVertical = null;
+  let positionHorizontal = null;
+
+  //gibt es schon eine Position
+  if(localStorage.getItem('position-vertical')) {
+    positionVertical = Number(localStorage.getItem('position-vertical'));
+  }
+  if (localStorage.getItem('position-horizontal')) {
+    positionHorizontal = Number(localStorage.getItem('position-horizontal'));
+  }
+
+  localStorage.clear();
+
+  //Position speichern + Richtung
+  positionVertical !== null ? localStorage.setItem("position-vertical", positionVertical) : positionVertical = null;
+  positionHorizontal !== null ? localStorage.setItem("position-horizontal", positionHorizontal) : positionHorizontal = null;
+  localStorage.setItem("direction", direction);
+};
+
 export const SteuerelementZurück = () => {
   return (
     <div>
@@ -125,17 +146,17 @@ export const SteuerelementZurück = () => {
         <Container>
           <Element>
             <Top to="">
-              <IconT />
+              <IconT onClick={() => {changeDirection('top')}}/>
             </Top>
             <Left to="">
-              <IconL />
+              <IconL onClick={() => {changeDirection('left')}}/>
             </Left>
             <Middle to="">OK</Middle>
             <Right to="">
-              <IconR />
+              <IconR onClick={() => {changeDirection('right')}}/>
             </Right>
             <Bottom to="">
-              <IconB />
+              <IconB onClick={() => {changeDirection('bottom')}}/>
             </Bottom>
           </Element>
         </Container>
