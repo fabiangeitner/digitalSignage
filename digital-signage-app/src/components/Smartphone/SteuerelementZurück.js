@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -138,7 +138,41 @@ const changeDirection = (direction) => {
   localStorage.setItem("direction", direction);
 };
 
+const submit = () => {
+  //Variablen zur Positionsbestimmung
+  let positionVertical = null;
+  let positionHorizontal = null;
+
+  //gibt es schon eine Position
+  if(localStorage.getItem('position-vertical')) {
+    positionVertical = Number(localStorage.getItem('position-vertical'));
+  }
+  if (localStorage.getItem('position-horizontal')) {
+    positionHorizontal = Number(localStorage.getItem('position-horizontal'));
+  }
+
+  localStorage.clear();
+
+  //Position speichern + Richtung
+  positionVertical !== null ? localStorage.setItem("position-vertical", positionVertical) : positionVertical = null;
+  positionHorizontal !== null ? localStorage.setItem("position-horizontal", positionHorizontal) : positionHorizontal = null;
+  localStorage.setItem("submit", "true");
+}
+
 export const SteuerelementZurück = () => {
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.addEventListener('storage', () => {
+      if (localStorage.getItem('changeView')) {
+        if (localStorage.getItem('changeView') === 'detail') {
+          navigate(`/steuerung-basket`, {replace: true}); //eslint-disable-line
+        }
+      } 
+    })
+  })
+
   return (
     <div>
       <HeaderHandy />
@@ -151,7 +185,7 @@ export const SteuerelementZurück = () => {
             <Left to="">
               <IconL onClick={() => {changeDirection('left')}}/>
             </Left>
-            <Middle to="">OK</Middle>
+            <Middle to="" onClick={submit}>OK</Middle>
             <Right to="">
               <IconR onClick={() => {changeDirection('right')}}/>
             </Right>

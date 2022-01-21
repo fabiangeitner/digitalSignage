@@ -57,11 +57,6 @@ const CarouselItemBestsellerMiddle = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  #position1-1 {
-    border: 4px solid #ff772f;
-    border-radius: 3px;
-  }
-
   img {
     width: 120%;
 
@@ -281,6 +276,31 @@ export const OverviewPage = () => {
         localStorage.setItem('position-horizontal', positionHoriz);
         localStorage.setItem('position-vertical', positionVertic);
       }
+      if (localStorage.getItem('submit')) {
+        //Variablen zur Positionsbestimmung
+        let positionVertic = 1;
+        let positionHoriz = 1;
+        let submit = localStorage.getItem('submit');
+
+        //gab es bereits eine Position
+        if(localStorage.getItem('position-vertical')) {
+          positionVertic = Number(localStorage.getItem('position-vertical'));
+        }
+        if (localStorage.getItem('position-horizontal')) {
+          positionHoriz = Number(localStorage.getItem('position-horizontal'));
+        }
+
+        localStorage.clear();
+
+        if (positionHoriz === 1 && positionVertic === 1) {
+          localStorage.setItem('changeView', 'detail')
+          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        } else {
+          //Position speichern
+          localStorage.setItem('position-horizontal', positionHoriz);
+          localStorage.setItem('position-vertical', positionVertic);
+        }
+      }
     })
   })
 
@@ -295,7 +315,7 @@ export const OverviewPage = () => {
             <img src={Bestseller1} alt="Bestseller1" id='position1-0'/>
           </CarouselItemBestseller>
           <CarouselItemBestsellerMiddle to="/detail" className="col-4">
-            <img src={Bestseller2} alt="Bestseller2" id='position1-1'/>
+            <img src={Bestseller2} alt="Bestseller2" id='position1-1' style={{border: "4px solid #ff772f", borderRadius: "3px"}}/>
           </CarouselItemBestsellerMiddle>
           <CarouselItemBestseller className="col-4">
             <img src={Bestseller3} alt="Bestseller3" id='position1-2'/>

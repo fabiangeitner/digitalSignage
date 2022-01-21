@@ -130,6 +130,22 @@ const Pay = styled(Link)`
   color: #fff;
 `;
 
+const changeDirection = (direction) => {
+  //Variablen zur Positionsbestimmung
+  let positionVertical = null;
+
+  //gibt es schon eine Position
+  if(localStorage.getItem('position-vertical')) {
+    positionVertical = Number(localStorage.getItem('position-vertical'));
+  }
+
+  localStorage.clear();
+
+  //Position speichern + Richtung
+  positionVertical !== null ? localStorage.setItem("position-vertical", positionVertical) : positionVertical = null;
+  localStorage.setItem("direction-basket", direction);
+};
+
 export const SteuerelementWarenkorb = () => {
   return (
     <div>
@@ -138,17 +154,17 @@ export const SteuerelementWarenkorb = () => {
         <Container>
           <Element>
             <Top to="">
-              <IconT />
+              <IconT onClick={() => {changeDirection('top')}}/>
             </Top>
             <Left to="">
-              <IconL />
+              <IconL onClick={() => {changeDirection('left')}}/>
             </Left>
             <Middle to="">OK</Middle>
             <Right to="">
-              <IconR />
+              <IconR onClick={() => {changeDirection('right')}}/>
             </Right>
             <Bottom to="">
-              <IconB />
+              <IconB onClick={() => {changeDirection('bottom')}}/>
             </Bottom>
           </Element>
         </Container>
