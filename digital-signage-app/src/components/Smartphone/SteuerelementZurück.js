@@ -121,6 +121,8 @@ const changeDirection = (direction) => {
   //Variablen zur Positionsbestimmung
   let positionVertical = null;
   let positionHorizontal = null;
+  let showCategories = null;
+  let category = null;
 
   //gibt es schon eine Position
   if(localStorage.getItem('position-vertical')) {
@@ -129,12 +131,20 @@ const changeDirection = (direction) => {
   if (localStorage.getItem('position-horizontal')) {
     positionHorizontal = Number(localStorage.getItem('position-horizontal'));
   }
+  if (localStorage.getItem('showCategories')) {
+    showCategories = localStorage.getItem('showCategories');
+  }
+  if (localStorage.getItem('category')) {
+    category = Number(localStorage.getItem('category'));
+  }
 
   localStorage.clear();
 
   //Position speichern + Richtung
   positionVertical !== null ? localStorage.setItem("position-vertical", positionVertical) : positionVertical = null;
   positionHorizontal !== null ? localStorage.setItem("position-horizontal", positionHorizontal) : positionHorizontal = null;
+  showCategories !== null ? localStorage.setItem("showCategories", showCategories) : showCategories = null;
+  category !== null ? localStorage.setItem("category", category) : category = null;
   localStorage.setItem("direction", direction);
 };
 
@@ -142,6 +152,8 @@ const submit = () => {
   //Variablen zur Positionsbestimmung
   let positionVertical = null;
   let positionHorizontal = null;
+  let showCategories = null;
+  let category = null;
 
   //gibt es schon eine Position
   if(localStorage.getItem('position-vertical')) {
@@ -150,12 +162,20 @@ const submit = () => {
   if (localStorage.getItem('position-horizontal')) {
     positionHorizontal = Number(localStorage.getItem('position-horizontal'));
   }
+  if (localStorage.getItem('showCategories')) {
+    showCategories = localStorage.getItem('showCategories');
+  }
+  if (localStorage.getItem('category')) {
+    category = Number(localStorage.getItem('category'));
+  }
 
   localStorage.clear();
 
   //Position speichern + Richtung
   positionVertical !== null ? localStorage.setItem("position-vertical", positionVertical) : positionVertical = null;
   positionHorizontal !== null ? localStorage.setItem("position-horizontal", positionHorizontal) : positionHorizontal = null;
+  showCategories !== null ? localStorage.setItem("showCategories", showCategories) : showCategories = null;
+  category !== null ? localStorage.setItem("category", category) : category = null;
   localStorage.setItem("submit", "true");
 }
 

@@ -29,15 +29,16 @@ export const DropdownHeader = () => {
         <DropdownWrapper className="my-3 col-8">
           <DropdownButton
             id="dropdown-basic-button"
+            id='position0-0'
             variant="secondary"
             title="Alle Kategorien"
           >
-            <Dropdown.Item href="/overview">Englische Bücher</Dropdown.Item>
-            <Dropdown.Item href="/overview_sorting">Romane</Dropdown.Item>
-            <Dropdown.Item href="/overview">Science Fiction</Dropdown.Item>
-            <Dropdown.Item href="/overview">Horror</Dropdown.Item>
-            <Dropdown.Item href="/overview">Sachbücher</Dropdown.Item>
-            <Dropdown.Item href="/overview">Kinderbücher</Dropdown.Item>
+            <Dropdown.Item href="/overview" id='category0'>Englische Bücher</Dropdown.Item>
+            <Dropdown.Item href="/overview_sorting" id='category1'>Romane</Dropdown.Item>
+            <Dropdown.Item href="/overview" id='category2'>Science Fiction</Dropdown.Item>
+            <Dropdown.Item href="/overview" id='category3'>Horror</Dropdown.Item>
+            <Dropdown.Item href="/overview" id='category4'>Sachbücher</Dropdown.Item>
+            <Dropdown.Item href="/overview" id='category5'>Kinderbücher</Dropdown.Item>
           </DropdownButton>
         </DropdownWrapper>
         <IconWrapper className="col-2">

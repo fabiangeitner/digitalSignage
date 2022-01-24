@@ -210,6 +210,8 @@ export const OverviewPage = () => {
         let positionVertic = 1;
         let positionHoriz = 1;
         let direction = localStorage.getItem('direction');
+        let showCategories = null;
+        let category = -1;
 
         //gab es bereits eine Position
         if(localStorage.getItem('position-vertical')) {
@@ -218,68 +220,109 @@ export const OverviewPage = () => {
         if (localStorage.getItem('position-horizontal')) {
           positionHoriz = Number(localStorage.getItem('position-horizontal'));
         }
+        if (localStorage.getItem('showCategories')) {
+          showCategories = localStorage.getItem('showCategories');
+        }
+        if (localStorage.getItem('category')) {
+          category = Number(localStorage.getItem('category'));
+        }
 
         localStorage.clear();
 
-        //aktuellen Rahmen eines Bildes entfernen
-        let image = document.getElementById(`position${positionVertic}-${positionHoriz}`);
-        image.style.border = '';
-        image.style.borderRadius = '';
+        //entweder Kategorien auswählen, oder normale Steuerung
+        if (showCategories === 'true') {
+          //aktuellen Rahmen eines Bildes entfernen
+          if (category !== -1) {
+            let borderCategory = document.getElementById(`category${category}`);
+            borderCategory.style.border = '';
+            borderCategory.style.borderRadius = '';
+          }
+          
+          switch (direction) {
+            case 'top':
+              if ( category !== -1 ) {
+                category = category - 1 ;
+              }
+              break;
+            case 'bottom': 
+              if (category !== 5) {
+                category = category + 1;
+              }
+              break;
+          }
 
-        //Position je nach Richtung anpassen
-        switch (direction) {
-          case 'top':
-            if ( positionVertic !== 0) {
-              positionVertic = positionVertic - 1 ;
-              if (positionVertic === 1) {
-                positionHoriz = 1;
+          if (category !== -1) {
+            document.getElementById(`category${category}`).style.border = '4px solid #ff772f';
+            document.getElementById(`category${category}`).style.borderRadius = '3px';
+          }
+
+          localStorage.setItem('showCategories', showCategories);
+          localStorage.setItem('category', category);
+          localStorage.setItem('position-horizontal', positionHoriz);
+          localStorage.setItem('position-vertical', positionVertic);
+        } else {
+          //aktuellen Rahmen eines Bildes entfernen
+          let image = document.getElementById(`position${positionVertic}-${positionHoriz}`);
+          image.style.border = '';
+          image.style.borderRadius = '';
+
+          //Position je nach Richtung anpassen
+          switch (direction) {
+            case 'top':
+              if ( positionVertic !== 0) {
+                positionVertic = positionVertic - 1 ;
+                if (positionVertic === 1) {
+                  positionHoriz = 1;
+                } else {
+                  positionHoriz = 0;
+                }
+              }
+              break;
+            case 'bottom': 
+              if (positionVertic !== 3) {
+                positionVertic = positionVertic + 1;
+                if (positionVertic === 1) {
+                  positionHoriz = 1;
+                } else {
+                  positionHoriz = 0;
+                }
+              }
+              break;
+            case 'right': 
+              if (positionVertic !== 0) {
+                if (positionHoriz !== 2) {
+                  positionHoriz = positionHoriz + 1;
+                }
               } else {
-                positionHoriz = 0;
+                positionHoriz = 0
               }
-            }
-            break;
-          case 'bottom': 
-            if (positionVertic !== 3) {
-              positionVertic = positionVertic + 1;
-              if (positionVertic === 1) {
-                positionHoriz = 1;
+              break;
+            case 'left': 
+              if (positionVertic !== 0) {
+                if (positionHoriz !== 0) {
+                  positionHoriz = positionHoriz - 1;
+                }
               } else {
-                positionHoriz = 0;
+                positionHoriz = 0
               }
-            }
-            break;
-          case 'right': 
-            if (positionVertic !== 0) {
-              if (positionHoriz !== 2) {
-                positionHoriz = positionHoriz + 1;
-              }
-            } else {
-              positionHoriz = 0
-            }
-            break;
-          case 'left': 
-            if (positionVertic !== 0) {
-              if (positionHoriz !== 0) {
-                positionHoriz = positionHoriz - 1;
-              }
-            } else {
-              positionHoriz = 0
-            }
-            break;
+              break;
+          }
+
+          //neues Bild Rahmen hinzufügen
+          document.getElementById(`position${positionVertic}-${positionHoriz}`).style.border = '4px solid #ff772f';
+          document.getElementById(`position${positionVertic}-${positionHoriz}`).style.borderRadius = '3px';
+
+          //Position speichern
+          localStorage.setItem('position-horizontal', positionHoriz);
+          localStorage.setItem('position-vertical', positionVertic);
         }
-
-        //neues Bild Rahmen hinzufügen
-        document.getElementById(`position${positionVertic}-${positionHoriz}`).style.border = '4px solid #ff772f';
-        document.getElementById(`position${positionVertic}-${positionHoriz}`).style.borderRadius = '3px';
-
-        //Position speichern
-        localStorage.setItem('position-horizontal', positionHoriz);
-        localStorage.setItem('position-vertical', positionVertic);
       }
       if (localStorage.getItem('submit')) {
         //Variablen zur Positionsbestimmung
         let positionVertic = 1;
         let positionHoriz = 1;
+        let showCategories = null;
+        let category = -1;
 
         //gab es bereits eine Position
         if(localStorage.getItem('position-vertical')) {
@@ -288,12 +331,39 @@ export const OverviewPage = () => {
         if (localStorage.getItem('position-horizontal')) {
           positionHoriz = Number(localStorage.getItem('position-horizontal'));
         }
+        if (localStorage.getItem('showCategories')) {
+          showCategories = localStorage.getItem('showCategories');
+        }
+        if (localStorage.getItem('category')) {
+          category = Number(localStorage.getItem('category'));
+        }
 
         localStorage.clear();
+        console.log(category + showCategories);
 
         if (positionHoriz === 1 && positionVertic === 1) {
           localStorage.setItem('changeView', 'detail')
           navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+        } else if (positionHoriz === 0 && positionVertic === 0) {
+            if (showCategories !== null) {
+              if (category === -1) {
+                document.getElementById('position0-0').click();
+                localStorage.removeItem('showCategories');
+              } else if (category === 1) {
+                localStorage.setItem('changeView', 'overview_sorting')
+                navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+              } else {
+                localStorage.setItem('position-horizontal', positionHoriz);
+                localStorage.setItem('position-vertical', positionVertic);
+                localStorage.setItem('showCategories', showCategories);
+                localStorage.setItem('category', category);
+              } 
+            } else {
+              document.getElementById('position0-0').click();
+              localStorage.setItem('showCategories', 'true');
+            }
+            localStorage.setItem('position-horizontal', positionHoriz);
+            localStorage.setItem('position-vertical', positionVertic);
         } else {
           //Position speichern
           localStorage.setItem('position-horizontal', positionHoriz);
@@ -306,7 +376,7 @@ export const OverviewPage = () => {
   return (
     <>
       <Header />
-      <DropdownHeader id='position0-0'/>
+      <DropdownHeader />
       <BestsellerWrapper>
         <Headline>Bestseller</Headline>
         <CarouselBestseller className="row">
