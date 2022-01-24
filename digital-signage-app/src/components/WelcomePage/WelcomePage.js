@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,17 +15,16 @@ const Headline = styled.h2`
   padding-top: 20px;
 `;
 
-export const WelcomePage = () => {  
-
+export const WelcomePage = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    window.addEventListener('storage', () => {
-      if (localStorage.getItem('changeView')) {
-        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+    window.addEventListener("storage", () => {
+      if (localStorage.getItem("changeView")) {
+        navigate(`/${localStorage.getItem("changeView")}`, { replace: true }); //eslint-disable-line
       }
-    })
-  })
+    });
+  });
 
   return (
     <>
@@ -44,7 +43,7 @@ export const WelcomePage = () => {
             />
           </Link>
 
-          <h3 class="py-3">Nutzen Sie ihr Smartphone zur Steuerung!</h3>
+          <h3>Nutzen Sie ihr Smartphone zur Steuerung!</h3>
         </div>
         <div class="footer"></div>
       </div>

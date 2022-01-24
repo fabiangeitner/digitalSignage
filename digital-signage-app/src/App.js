@@ -55,7 +55,7 @@ function App() {
         <Route
           path="infoCheckout"
           element={
-            <InfoCheckout text="Bitte führen Sie den Checkout Prozess auf ihrem Smarphone aus!" />
+            <InfoCheckout text="Bitte führen Sie den Checkout Prozess auf ihrem Smarphone durch!" />
           }
         />
         <Route

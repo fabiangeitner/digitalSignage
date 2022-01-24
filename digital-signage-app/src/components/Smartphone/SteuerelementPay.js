@@ -130,6 +130,11 @@ const Pay = styled(Link)`
   color: #fff;
 `;
 
+const addToCart = () => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "infoCheckout");
+};
+
 export const SteuerelementPay = () => {
   return (
     <div>
@@ -156,7 +161,9 @@ export const SteuerelementPay = () => {
           <Back to="">Zurück</Back>
         </ButtonFir>
         <ButtonSec>
-          <Pay to="bestellung">Weiter zur Kasse</Pay>
+          <Pay to="/login" onClick={addToCart}>
+            Weiter zur Kasse
+          </Pay>
         </ButtonSec>
       </SteuerungWrapper>
       <NavigationSmartphone />

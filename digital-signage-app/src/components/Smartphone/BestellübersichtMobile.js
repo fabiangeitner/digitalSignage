@@ -138,6 +138,11 @@ const Button = styled(Link)`
   color: #fff;
 `;
 
+const finishedPayment = () => {
+  localStorage.clear();
+  localStorage.setItem("changeView", "slideshow");
+};
+
 export const BestellübersichtMobile = () => {
   return (
     <>
@@ -178,7 +183,9 @@ export const BestellübersichtMobile = () => {
             <Betrag>44,95 €</Betrag>
           </Gesamtbetrag>
           <ButtonContainer>
-            <Button to="">Jetzt Bezahlen</Button>
+            <Button to="/confirmationPage" onClick={finishedPayment}>
+              Jetzt Bezahlen
+            </Button>
           </ButtonContainer>
         </Wrapper>
       </BestellübersichtWrapper>

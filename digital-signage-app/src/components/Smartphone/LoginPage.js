@@ -64,6 +64,19 @@ const Login = styled.div`
   }
 `;
 
+const AnmeldeLink = styled(Link)`
+  text-decoration: none;
+  background-color: #ff772f;
+  font-family: sofia-pro, sans-serif;
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
 const Register = styled.div`
   h2 {
     font-size: 19px;
@@ -96,6 +109,7 @@ const Register = styled.div`
 
 const GastLink = styled(Link)`
   text-decoration: none;
+  color: #ff772f;
 `;
 
 const login = (e) => {
@@ -104,14 +118,13 @@ const login = (e) => {
 };
 
 export const LoginPage = () => {
-
   React.useEffect(() => {
     window.onload = () => {
       console.log("test");
       localStorage.clear();
       localStorage.setItem("changeView", "welcome");
-    }
-  })
+    };
+  });
 
   return (
     <div>
@@ -132,7 +145,9 @@ export const LoginPage = () => {
             placeholder="Passwort"
           ></input>
           <h3 className="px-2 py-2">Passwort vergessen?</h3>
-          <div className="mx-auto">Anmelden</div>
+          <div className="mx-auto">
+            <AnmeldeLink to="/bestellung">Anmelden</AnmeldeLink>
+          </div>
         </form>
         <p>
           Mit der Anmeldung erkläre stimme ich den AGBs <br /> und der
