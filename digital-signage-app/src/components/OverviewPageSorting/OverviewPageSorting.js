@@ -207,6 +207,11 @@ export const OverviewPageSorting = () => {
       if (localStorage.getItem('changeView')) {
         navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
       }
+      if (localStorage.getItem('submit-os')) {
+        localStorage.clear();
+        localStorage.setItem('changeControl', 'steuerung-basket');
+        document.getElementById('osPosition1-1').click();
+      }
     })
   })
 
@@ -220,7 +225,7 @@ export const OverviewPageSorting = () => {
           <CarouselItemBestseller className="col-4">
             <img src={RomanBestseller1} alt="Bestseller1" />
           </CarouselItemBestseller>
-          <CarouselItemBestsellerMiddle to="/detail" className="col-4">
+          <CarouselItemBestsellerMiddle to="/detail" className="col-4" id='osPosition1-1'>
             <img src={RomanBestseller2} alt="Bestseller2" />
           </CarouselItemBestsellerMiddle>
           <CarouselItemBestseller className="col-4">

@@ -149,12 +149,11 @@ export const DetailPage = () => {
   React.useEffect(() => {
     window.addEventListener('storage', () => {
       if (localStorage.getItem('changeView')) {
-        if (localStorage.getItem('changeView') === 'cart-pay') {
-          localStorage.setItem('changeView', 'cart');
-          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
-        } else {
-          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
-        }
+        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+      }
+      if (localStorage.getItem('addToCart')) {
+        localStorage.setItem('changeControl', 'steuerung-pay');
+        document.getElementById('position1').parentElement.click();
       }
       if (localStorage.getItem('direction-basket')) {
         //Variablen zur Positionsbestimmung
@@ -231,7 +230,7 @@ export const DetailPage = () => {
           </LinkTo>
           <WrapperText>
             <img className="heart my-1" src={heart} alt="favoriten" id='position2'/>
-            <h2 class="">Mein Kopf, ein Universum</h2>
+            <h2>Mein Kopf, ein Universum</h2>
             <p id="subtitle">272 Seiten, Taschenbuch, 2021</p>
             <p id="price">15 EUR</p>
             <p id="description">

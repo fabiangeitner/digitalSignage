@@ -154,6 +154,7 @@ const submit = () => {
   let positionHorizontal = null;
   let showCategories = null;
   let category = null;
+  let changeView = null;
 
   //gibt es schon eine Position
   if(localStorage.getItem('position-vertical')) {
@@ -168,6 +169,9 @@ const submit = () => {
   if (localStorage.getItem('category')) {
     category = Number(localStorage.getItem('category'));
   }
+  if (localStorage.getItem('changeView')) {
+    changeView = localStorage.getItem('changeView');
+  }
 
   localStorage.clear();
 
@@ -176,7 +180,12 @@ const submit = () => {
   positionHorizontal !== null ? localStorage.setItem("position-horizontal", positionHorizontal) : positionHorizontal = null;
   showCategories !== null ? localStorage.setItem("showCategories", showCategories) : showCategories = null;
   category !== null ? localStorage.setItem("category", category) : category = null;
-  localStorage.setItem("submit", "true");
+
+  if (changeView === 'overview_sorting') {
+    localStorage.setItem("submit-os", "true");
+  } else {
+    localStorage.setItem("submit", "true");
+  }
 }
 
 export const SteuerelementZurück = () => {
@@ -185,11 +194,10 @@ export const SteuerelementZurück = () => {
 
   React.useEffect(() => {
     window.addEventListener('storage', () => {
-      if (localStorage.getItem('changeView')) {
-        if (localStorage.getItem('changeView') === 'detail') {
-          navigate(`/steuerung-basket`, {replace: true}); //eslint-disable-line
-        }
-      } 
+      if (localStorage.getItem('changeControl') === 'steuerung-basket') {
+        localStorage.clear();
+        navigate(`/steuerung-basket`, {replace: true}); //eslint-disable-line
+      }
     })
   })
 

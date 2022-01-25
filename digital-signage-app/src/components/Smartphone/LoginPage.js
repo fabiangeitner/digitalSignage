@@ -120,7 +120,6 @@ const login = (e) => {
 export const LoginPage = () => {
   React.useEffect(() => {
     window.onload = () => {
-      console.log("test");
       localStorage.clear();
       localStorage.setItem("changeView", "welcome");
     };

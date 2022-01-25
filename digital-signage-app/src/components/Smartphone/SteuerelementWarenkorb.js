@@ -171,7 +171,7 @@ const back = () => {
 
 const addToCart = () => {
   localStorage.clear();
-  localStorage.setItem("changeView", "cart-pay");
+  localStorage.setItem("addToCart", "true");
 }
 
 export const SteuerelementWarenkorb = () => {
@@ -180,7 +180,7 @@ export const SteuerelementWarenkorb = () => {
 
   React.useEffect(() => {
     window.addEventListener('storage', () => {
-      if (localStorage.getItem('changeView') === 'cart') {
+      if (localStorage.getItem('changeControl')) {
         navigate(`/steuerung-pay`, {replace: true}); //eslint-disable-line
       }
     })
@@ -211,7 +211,7 @@ export const SteuerelementWarenkorb = () => {
           <Back to="" onClick={back}>Zurück</Back>
         </ButtonFir>
         <ButtonSec>
-          <Pay to="steuerung-pay" onClick={addToCart}>In den Warenkorb</Pay>
+          <Pay to="" onClick={addToCart}>In den Warenkorb</Pay>
         </ButtonSec>
       </SteuerungWrapper>
       <NavigationSmartphone />

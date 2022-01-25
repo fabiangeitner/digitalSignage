@@ -229,9 +229,9 @@ export const OverviewPage = () => {
 
         localStorage.clear();
 
-        //entweder Kategorien auswählen, oder normale Steuerung
+        //wenn Dropdown ausgewaehlt ist wird die normale Steurung deaktiviert und die Kategorien koennen gesteuert werden
         if (showCategories === 'true') {
-          //aktuellen Rahmen eines Bildes entfernen
+          //aktuellen Rahmen der Kategorie entfernen außer das Dropdown an sich
           if (category !== -1) {
             let borderCategory = document.getElementById(`category${category}`);
             borderCategory.style.border = '';
@@ -339,19 +339,18 @@ export const OverviewPage = () => {
         }
 
         localStorage.clear();
-        console.log(category + showCategories);
 
-        if (positionHoriz === 1 && positionVertic === 1) {
-          localStorage.setItem('changeView', 'detail')
-          navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
-        } else if (positionHoriz === 0 && positionVertic === 0) {
-            if (showCategories !== null) {
-              if (category === -1) {
+        if (positionHoriz === 1 && positionVertic === 1) { //wird auf den Bestseller geklickt
+          localStorage.setItem('changeControl', 'steuerung-basket')
+          navigate(`/detail`, {replace: true}); //eslint-disable-line
+        } else if (positionHoriz === 0 && positionVertic === 0) { //wird auf das Dropdown Mennue geklickt
+            if (showCategories !== null) { //ist das Menue sichtbar
+              if (category === -1) { //handelt es sich um das Dropdown
                 document.getElementById('position0-0').click();
                 localStorage.removeItem('showCategories');
-              } else if (category === 1) {
+              } else if (category === 1) { //handelt es sich um die Kategorie Romane
                 localStorage.setItem('changeView', 'overview_sorting')
-                navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+                navigate(`/overview_sorting`, {replace: true}); //eslint-disable-line
               } else {
                 localStorage.setItem('position-horizontal', positionHoriz);
                 localStorage.setItem('position-vertical', positionVertic);

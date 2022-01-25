@@ -29,8 +29,8 @@ export const WelcomePage = () => {
   return (
     <>
       <div className="containerTest">
-        <div class="header">
-          <span class="header-headline">STORYTIME</span>
+        <div className="header">
+          <span className="header-headline">STORYTIME</span>
         </div>
         <div className="content">
           <Headline>WILLKOMMEN</Headline>
@@ -45,7 +45,7 @@ export const WelcomePage = () => {
 
           <h3>Nutzen Sie ihr Smartphone zur Steuerung!</h3>
         </div>
-        <div class="footer"></div>
+        <div className="footer"></div>
       </div>
     </>
   );
