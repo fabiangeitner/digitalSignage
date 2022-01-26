@@ -7,14 +7,6 @@ import "./WelcomePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import welcome from "../../Assets/WelcomePage.png";
 
-const Headline = styled.h2`
-  font-family: "Proforma";
-  font-weight: bold;
-  color: #23645d;
-  font-size: 25px;
-  padding-top: 20px;
-`;
-
 export const WelcomePage = () => {
   const navigate = useNavigate();
 
@@ -33,11 +25,10 @@ export const WelcomePage = () => {
           <span className="header-headline">STORYTIME</span>
         </div>
         <div className="content">
-          <Headline>WILLKOMMEN</Headline>
           <p>So funktioniert's:</p>
           <Link to="/overview">
             <img
-              className="welcomeImg my-5"
+              className="welcomeImg"
               src={welcome}
               alt="Welcome Erläuterung"
             />

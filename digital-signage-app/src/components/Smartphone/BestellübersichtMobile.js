@@ -41,6 +41,7 @@ const Information = styled.div`
     font-family: "Sofia Pro";
     font-weight: 400;
     margin: 0;
+    padding: 0;
   }
   span {
     color: #000000;
