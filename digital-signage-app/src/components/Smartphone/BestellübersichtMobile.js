@@ -157,7 +157,7 @@ export const BestellübersichtMobile = () => {
           <Zahlung>
             <h1>Zahlung</h1>
             <p>
-              Bevorzugte Zahlungsart: <b>Barzahler</b>
+              Bevorzugte Zahlungsart: <b>Barzahlung</b>
             </p>
           </Zahlung>
           <Detail>
