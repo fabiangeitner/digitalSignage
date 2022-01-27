@@ -170,7 +170,7 @@ export const Cart = () => {
         <Total className="row">
           <h2 className="col-3">Total</h2>
           <LinkTo className="col-4 offset-5" to="/infoCheckout">
-            <h2>44,94 €</h2>
+            <h2>15€</h2>
           </LinkTo>
           <hr />
         </Total>
