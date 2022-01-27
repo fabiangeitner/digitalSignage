@@ -55,19 +55,19 @@ function App() {
         <Route
           path="infoCheckout"
           element={
-            <InfoCheckout text="Bitte führen Sie den Checkout Prozess auf ihrem Smarphone durch!" />
+            <InfoCheckout text="Bitte führen Sie den Checkout Prozess auf ihrem Smartphone durch!" />
           }
         />
         <Route
           path="infoFavorit"
           element={
-            <InfoFavorit text="Bitte loggen Sie sich auf ihrem Smarphone ein, um Favoriten in Ihrem Konto zu speichern" />
+            <InfoFavorit text="Bitte loggen Sie sich auf ihrem Smartphone ein, um Favoriten in Ihrem Konto zu speichern" />
           }
         />
         <Route
           path="infoProfile"
           element={
-            <InfoProfile text="Bitte loggen Sie sich auf ihrem Smarphone ein, um Ihr Profil zu betrachten!" />
+            <InfoProfile text="Bitte loggen Sie sich auf ihrem Smartphone ein, um Ihr Profil zu betrachten!" />
           }
         />
       </Routes>

@@ -12,6 +12,7 @@ const InfoCheckoutWrapper = styled.div`
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     margin: 0;
+    font-size: 19px;
   }
   img {
     width: 65%;
