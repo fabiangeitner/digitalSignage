@@ -162,25 +162,17 @@ export const BestellübersichtMobile = () => {
           </Zahlung>
           <Detail>
             <Headline>Angaben zur Bestellung</Headline>
-            <Subheadline>3 Artikel</Subheadline>
+            <Subheadline>1 Artikel</Subheadline>
           </Detail>
           <Übersicht>
             <Artikel>
-              <b>1x</b> If I stay
+              <b>1x</b> Ein ganzes halbes Jahr
             </Artikel>
             <Preis>15,00 €</Preis>
-            <Artikel>
-              <b>1x</b> Mord im alten Pfarrhaus
-            </Artikel>
-            <Preis>14,95 €</Preis>
-            <Artikel>
-              <b>1x</b> It ends with us
-            </Artikel>
-            <Preis>18,99 €</Preis>
           </Übersicht>
           <Gesamtbetrag>
             <Summe>Gesamtsumme</Summe>
-            <Betrag>44,95 €</Betrag>
+            <Betrag>15 €</Betrag>
           </Gesamtbetrag>
           <ButtonContainer>
             <Button to="/confirmationPage" onClick={finishedPayment}>
