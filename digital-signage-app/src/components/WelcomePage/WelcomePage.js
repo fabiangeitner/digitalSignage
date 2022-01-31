@@ -33,17 +33,13 @@ export const WelcomePage = () => {
           <span class="header-headline">STORYTIME</span>
         </div>
         <div className="content">
-          <Headline>WILLKOMMEN</Headline>
-          <p>So funktioniert's:</p>
           <Link to="/overview">
             <img
-              className="welcomeImg my-5"
+              className="welcomeImg my-3"
               src={welcome}
               alt="Welcome Erläuterung"
             />
           </Link>
-
-          <h3>Nutzen Sie ihr Smartphone zur Steuerung!</h3>
         </div>
         <div class="footer"></div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Header } from "../Header/Header";
-import Smartphone from "../../Assets/Smartphone.png";
+import Smartphone from "../../Assets/Smartphone2.png";
 import { Link } from "react-router-dom";
 
 const InfoCheckoutWrapper = styled.div`

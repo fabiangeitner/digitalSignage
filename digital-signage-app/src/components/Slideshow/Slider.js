@@ -1,22 +1,36 @@
 import React from "react";
+import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import QRCodeImg from "../../Assets/QRCode.png";
 import "./Slider.css";
 
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SliderData } from "./SliderData";
 
-export const Slideshow = () => {
+const QRCode = styled.div`
+  height: 90px;
+  width: 90px;
+  background-image: url(${QRCodeImg});
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  bottom: 85px;
+  right: 25px;
+  position: absolute;
+`;
 
+export const Slideshow = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    window.addEventListener('storage', () => {
-      if (localStorage.getItem('changeView')) {
-        navigate(`/${localStorage.getItem('changeView')}`, {replace: true}); //eslint-disable-line
+    window.addEventListener("storage", () => {
+      if (localStorage.getItem("changeView")) {
+        navigate(`/${localStorage.getItem("changeView")}`, { replace: true }); //eslint-disable-line
       }
-    })
-  })
+    });
+  });
 
   return (
     <>
@@ -31,10 +45,7 @@ export const Slideshow = () => {
                 alt={slide.imageInfo}
               />
               <Link to="/welcome" className="qrCode">
-                <img
-                  src="https://www.kaspersky.de/content/de-de/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png"
-                  alt=""
-                />
+                <QRCode img src={slide.image} alt={slide.imageInfo} />
               </Link>
             </Carousel.Item>
           ))}
