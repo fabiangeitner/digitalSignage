@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <HeaderHeadline>Storybook</HeaderHeadline>
+        <HeaderHeadline>Storytime</HeaderHeadline>
       </HeaderWrapper>
     </>
   );

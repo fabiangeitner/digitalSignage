@@ -38,15 +38,15 @@ const Suche = styled(RiSearch2Line)`
 
 const openSearch = () => {
   localStorage.clear();
-  localStorage.setItem('changeView', 'search');
-}
+  localStorage.setItem("changeView", "search");
+};
 
 export const HeaderHandy = () => {
   return (
     <HeaderWrapper>
-      <Logo>Storybook</Logo>
+      <Logo>Storytime</Logo>
       <Container to="/searchMobile">
-        <Suche onClick={openSearch}/>
+        <Suche onClick={openSearch} />
       </Container>
     </HeaderWrapper>
   );
